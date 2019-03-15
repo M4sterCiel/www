@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<style>
+		h1 {
+			font-size: 32px;
+			text-align: center;
+			font-family: 'Times New Roman', Times, serif;
+			margin-top: 50px;
+		}
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+			margin-top: 50px;
+		}
+
+		td {
+			width: 70px;
+		}
+
+		.high-rigth {
+			text-align: right;
+			font-size: 7px;
+			margin: 10px;
+		}
+
+		.middle {
+			text-align: center;
+			font-size: 25px;
+			font-weight: bold;
+			margin: 5px;
+		}
+
+		.bottom-left {
+			text-align: left;
+			font-size: 10px;
+			margin: 10px;
+		}
+
+		#mini-cell {
+			width: 20px;
+			background-color: white;
+		}
+
+		.first-line-left {
+			background-color: palegreen;
+			border: 2px solid black;
+		}
+
+		.first-col-left {
+			background-color: #ff6666;
+			border: 2px solid black;
+			;
+		}
+
+		.second-col {
+			background-color: navajowhite;
+			border: 2px solid black;
+		}
+
+		.heigtheenth-line-rigth {
+			background-color: #ffff99;
+			border: 2px solid black;
+		}
+
+		.first-line-rigth {
+			background-color: paleturquoise;
+			border: 2px solid black;
+		}
+
+		.fourteenth-line-rigth {
+			background-color: palegreen;
+			border: 2px solid black;
+		}
+
+		.thirteenth-line-rigth {
+			background-color: #cccc99;
+			border: 2px solid black;
+		}
+
+		.thirteenth-grey-line-rigth {
+			background-color: lightgrey;
+			border: 2px solid black;
+		}
+
+		.fourth-col {
+			background-color: lightpink;
+			border: 2px solid black;
+		}
+
+		.tenth-col {
+			background-color: whitesmoke;
+			border: 2px solid black;
+		}
+
+		.sub-line1 {
+			background-color: #ffbfff;
+			border: 2px solid black;
+		}
+
+		.sub-line2 {
+			background-color: #ff99cc;
+			border: 2px solid black;
+		}
+
+		.sub-table {
+			margin-top: 45px;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<meta name="Description" content="Tableau périodique des éléments de Mendeleiv">
+	<meta title="Tableau périodique des éléments">
+</head>
+
+<body>
+	<header>
+		<h1>Tableau périodique des éléments</h1>
+	</header>
+	<div>
+		<img src="tableau-periodique-des-elements-2.jpg" alt="Tableau des éléments" height="auto" width="600">
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td class="first-line-left">
+					<p class="high-rigth">1.007975</p>
+					<p class="middle">H</p>
+					<p class="bottom-left">1</p>
+				</td>
+				<td></td>
+				<td id="mini-cell"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="first-line-rigth">
+					<p class="high-rigth">4.002602</p>
+					<p class="middle">He</p>
+					<p class="bottom-left">2</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="first-col-left">
+					<p class="high-rigth">6.9395</p>
+					<p class="middle">Li</p>
+					<p class="bottom-left">3</p>
+				</td>
+				<td class="second-col">
+					<p class="high-rigth">9.0121831</p>
+					<p class="middle">Be</p>
+					<p class="bottom-left">4</p>
+				</td>
+				<td id="mini-cell"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">10,8135</p>
+					<p class="middle">B</p>
+					<p class="bottom-left">5</p>
+				</td>
+				<td class="fourteenth-line-rigth">
+					<p class="high-rigth">12,0106</p>
+					<p class="middle">C</p>
+					<p class="bottom-left">6</p>
+				</td>
+				<td class="fourteenth-line-rigth">
+					<p class="high-rigth">14,006855</p>
+					<p class="middle">N</p>
+					<p class="bottom-left">7</p>
+				</td>
+				<td class="fourteenth-line-rigth">
+					<p class="high-rigth">15,99940</p>
+					<p class="middle">O</p>
+					<p class="bottom-left">8</p>
+				</td>
+				<td class="heigtheenth-line-rigth">
+					<p class="high-rigth">18,99840316</p>
+					<p class="middle">F</p>
+					<p class="bottom-left">9</p>
+				</td>
+				<td class="first-line-rigth">
+					<p class="high-rigth">20.1797 (6)</p>
+					<p class="middle">Ne</p>
+					<p class="bottom-left">10</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="first-col-left">
+					<p class="high-rigth">22,98976928</p>
+					<p class="middle">Na</p>
+					<p class="bottom-left">11</p>
+				</td>
+				<td class="second-col">
+					<p class="high-rigth">24,3055</p>
+					<p class="middle">Mg</p>
+					<p class="bottom-left">12</p>
+				</td>
+				<td id="mini-cell"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">26,9815385</p>
+					<p class="middle">Al</p>
+					<p class="bottom-left">13</p>
+				</td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">28,085 ⑴</p>
+					<p class="middle">Si</p>
+					<p class="bottom-left">14</p>
+				</td>
+				<td class="fourteenth-line-rigth">
+					<p class="high-rigth">30,97376200</p>
+					<p class="middle">P</p>
+					<p class="bottom-left">15</p>
+				</td>
+				<td class="fourteenth-line-rigth">
+					<p class="high-rigth">32,0675</p>
+					<p class="middle">S</p>
+					<p class="bottom-left">16</p>
+				</td>
+				<td class="heigtheenth-line-rigth">
+					<p class="high-rigth">35,4515</p>
+					<p class="middle">Cl</p>
+					<p class="bottom-left">17</p>
+				</td>
+				<td class="first-line-rigth">
+					<p class="high-rigth">39,948 ⑴</p>
+					<p class="middle">Ar</p>
+					<p class="bottom-left">18</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="first-col-left">
+					<p class="high-rigth">39,0983 ⑴</p>
+					<p class="middle">K</p>
+					<p class="bottom-left">19</p>
+				</td>
+				<td class="second-col">
+					<p class="high-rigth">40,078 ⑷</p>
+					<p class="middle">Ca</p>
+					<p class="bottom-left">20</p>
+				</td>
+				<td id="mini-cell"></td>
+				<td class="fourth-col">
+					<p class="high-rigth">44,955908 ⑸</p>
+					<p class="middle">Sc</p>
+					<p class="bottom-left">21</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">47,867 ⑴</p>
+					<p class="middle">Ti</p>
+					<p class="bottom-left">22</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">50,9415 ⑴</p>
+					<p class="middle">V</p>
+					<p class="bottom-left">23</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">51,9961 ⑹</p>
+					<p class="middle">Cr</p>
+					<p class="bottom-left">24</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">54,938044</p>
+					<p class="middle">Mn</p>
+					<p class="bottom-left">25</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">55,845 ⑵</p>
+					<p class="middle">Fe</p>
+					<p class="bottom-left">26</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">58,933194</p>
+					<p class="middle">Co</p>
+					<p class="bottom-left">27</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">58,6934 ⑷</p>
+					<p class="middle">Ni</p>
+					<p class="bottom-left">28</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">63,546 ⑶</p>
+					<p class="middle">Cu</p>
+					<p class="bottom-left">29</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">65,38 ⑵</p>
+					<p class="middle">Zn</p>
+					<p class="bottom-left">30</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">69,723 ⑴</p>
+					<p class="middle">Ga</p>
+					<p class="bottom-left">31</p>
+				</td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">72,630 ⑻</p>
+					<p class="middle">Ge</p>
+					<p class="bottom-left">32</p>
+				</td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">74,921595</p>
+					<p class="middle">As</p>
+					<p class="bottom-left">33</p>
+				</td>
+				<td class="fourteenth-line-rigth">
+					<p class="high-rigth">78,971 ⑻</p>
+					<p class="middle">Se</p>
+					<p class="bottom-left">34</p>
+				</td>
+				<td class="heigtheenth-line-rigth">
+					<p class="high-rigth">79,904</p>
+					<p class="middle">Br</p>
+					<p class="bottom-left">35</p>
+				</td>
+				<td class="first-line-rigth">
+					<p class="high-rigth">83,798 ⑵</p>
+					<p class="middle">Kr</p>
+					<p class="bottom-left">36</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="first-col-left">
+					<p class="high-rigth">85,4678 ⑶</p>
+					<p class="middle">Rb</p>
+					<p class="bottom-left">37</p>
+				</td>
+				<td class="second-col">
+					<p class="high-rigth">87,62 ⑴</p>
+					<p class="middle">Sr</p>
+					<p class="bottom-left">38</p>
+				</td>
+				<td id="mini-cell"></td>
+				<td class="fourth-col">
+					<p class="high-rigth">88,90584</p>
+					<p class="middle">Y</p>
+					<p class="bottom-left">39</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">91,224 ⑵</p>
+					<p class="middle">Zr</p>
+					<p class="bottom-left">40</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">92,90637</p>
+					<p class="middle">Nb</p>
+					<p class="bottom-left">41</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">95,95 ⑴</p>
+					<p class="middle">Mo</p>
+					<p class="bottom-left">42</p>
+				</td>
+				<td class="fourth-col" id="dashed">
+					<p class="high-rigth">[98]</p>
+					<p class="middle">Tc</p>
+					<p class="bottom-left">43</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">101,07 ⑵</p>
+					<p class="middle">Ru</p>
+					<p class="bottom-left">44</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">102,90550</p>
+					<p class="middle">Rh</p>
+					<p class="bottom-left">45</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">106,42 ⑴</p>
+					<p class="middle">Pd</p>
+					<p class="bottom-left">46</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">107,8682 ⑵</p>
+					<p class="middle">Ag</p>
+					<p class="bottom-left">47</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">112,414 ⑷</p>
+					<p class="middle">Cd</p>
+					<p class="bottom-left">48</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">114,818 ⑴</p>
+					<p class="middle">In</p>
+					<p class="bottom-left">49</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">118,710 ⑺</p>
+					<p class="middle">Sn</p>
+					<p class="bottom-left">50</p>
+				</td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">121,760 ⑴</p>
+					<p class="middle">Sb</p>
+					<p class="bottom-left">51</p>
+				</td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">127,60 ⑶</p>
+					<p class="middle">Te</p>
+					<p class="bottom-left">52</p>
+				</td>
+				<td class="heigtheenth-line-rigth">
+					<p class="high-rigth">126,90447</p>
+					<p class="middle">I</p>
+					<p class="bottom-left">53</p>
+				</td>
+				<td class="first-line-rigth">
+					<p class="high-rigth">131,293 ⑹</p>
+					<p class="middle">Xe</p>
+					<p class="bottom-left">54</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="first-col-left">
+					<p class="high-rigth">132,905452</p>
+					<p class="middle">Cs</p>
+					<p class="bottom-left">55</p>
+				</td>
+				<td class="second-col">
+					<p class="high-rigth">137,327 ⑺</p>
+					<p class="middle">Ba</p>
+					<p class="bottom-left">56</p>
+				</td>
+				<td id="mini-cell"></td>
+				<td>
+					<p class="middle">*</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">178,49 ⑵</p>
+					<p class="middle">Hf</p>
+					<p class="bottom-left">72</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">180,94788</p>
+					<p class="middle">Ta</p>
+					<p class="bottom-left">73</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">183,84 ⑴</p>
+					<p class="middle">W</p>
+					<p class="bottom-left">74</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">186,207 ⑴</p>
+					<p class="middle">Re</p>
+					<p class="bottom-left">75</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">190,23 ⑶</p>
+					<p class="middle">Os</p>
+					<p class="bottom-left">76</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">192,217 ⑶</p>
+					<p class="middle">Ir</p>
+					<p class="bottom-left">77</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">195,084 ⑼</p>
+					<p class="middle">Pt</p>
+					<p class="bottom-left">78</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">196,966569</p>
+					<p class="middle">Au</p>
+					<p class="bottom-left">79</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">200,592 ⑶</p>
+					<p class="middle">Hg</p>
+					<p class="bottom-left">80</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">204,3835</p>
+					<p class="middle">Tl</p>
+					<p class="bottom-left">81</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">207,2 ⑴</p>
+					<p class="middle">Pb</p>
+					<p class="bottom-left">82</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">208,98040</p>
+					<p class="middle">Bi</p>
+					<p class="bottom-left">83</p>
+				</td>
+				<td class="thirteenth-grey-line-rigth">
+					<p class="high-rigth">[209]</p>
+					<p class="middle">Po</p>
+					<p class="bottom-left">84</p>
+				</td>
+				<td class="thirteenth-line-rigth">
+					<p class="high-rigth">[210]</p>
+					<p class="middle">At</p>
+					<p class="bottom-left">85</p>
+				</td>
+				<td class="first-line-rigth">
+					<p class="high-rigth">[222]</p>
+					<p class="middle">Rn</p>
+					<p class="bottom-left">86</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="first-col-left">
+					<p class="high-rigth">[223]</p>
+					<p class="middle">Fr</p>
+					<p class="bottom-left">87</p>
+				</td>
+				<td class="second-col">
+					<p class="high-rigth">[226]</p>
+					<p class="middle">Ra</p>
+					<p class="bottom-left">88</p>
+				</td>
+				<td id="mini-cell"></td>
+				<td>
+					<p class="middle">**</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">[267]</p>
+					<p class="middle">Rf</p>
+					<p class="bottom-left">104</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">[268]</p>
+					<p class="middle">Db</p>
+					<p class="bottom-left">105</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">[269]</p>
+					<p class="middle">Sg</p>
+					<p class="bottom-left">106</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">[270]</p>
+					<p class="middle">Bh</p>
+					<p class="bottom-left">107</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">[277]</p>
+					<p class="middle">Hs</p>
+					<p class="bottom-left">108</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[278]</p>
+					<p class="middle">Mt</p>
+					<p class="bottom-left">109</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[281]</p>
+					<p class="middle">Ds</p>
+					<p class="bottom-left">110</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[282]</p>
+					<p class="middle">Rg</p>
+					<p class="bottom-left">111</p>
+				</td>
+				<td class="fourth-col">
+					<p class="high-rigth">[285]</p>
+					<p class="middle">Cn</p>
+					<p class="bottom-left">112</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[286]</p>
+					<p class="middle">Nh</p>
+					<p class="bottom-left">113</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[289]</p>
+					<p class="middle">Fl</p>
+					<p class="bottom-left">114</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[289]</p>
+					<p class="middle">Mc</p>
+					<p class="bottom-left">115</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[293]</p>
+					<p class="middle">Lv</p>
+					<p class="bottom-left">116</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[294]</p>
+					<p class="middle">Ts</p>
+					<p class="bottom-left">117</p>
+				</td>
+				<td class="tenth-col">
+					<p class="high-rigth">[294]</p>
+					<p class="middle">Og</p>
+					<p class="bottom-left">118</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table class="sub-table">
+			<tr>
+				<td></td>
+				<td></td>
+				<td id="mini-cell"></td>
+				<td>
+					<p class="middle">*</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">138,90547</p>
+					<p class="middle">La</p>
+					<p class="bottom-left">57</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">140,116 ⑴</p>
+					<p class="middle">Ce</p>
+					<p class="bottom-left">58</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">140,90766</p>
+					<p class="middle">Pr</p>
+					<p class="bottom-left">59</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">144,242 ⑶</p>
+					<p class="middle">Nd</p>
+					<p class="bottom-left">60</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">[145]</p>
+					<p class="middle">Pm</p>
+					<p class="bottom-left">61</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">150,36 ⑵</p>
+					<p class="middle">Sm</p>
+					<p class="bottom-left">62</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">151,964 ⑴</p>
+					<p class="middle">Eu</p>
+					<p class="bottom-left">63</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">157,25 ⑶</p>
+					<p class="middle">Gd</p>
+					<p class="bottom-left">64</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">158,92535</p>
+					<p class="middle">Tb</p>
+					<p class="bottom-left">65</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">162,500 ⑴</p>
+					<p class="middle">Dy</p>
+					<p class="bottom-left">66</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">164,93033</p>
+					<p class="middle">Ho</p>
+					<p class="bottom-left">67</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">167,259 ⑶</p>
+					<p class="middle">Er</p>
+					<p class="bottom-left">68</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">168,93422</p>
+					<p class="middle">Tm</p>
+					<p class="bottom-left">69</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">173,045</p>
+					<p class="middle">Yb</p>
+					<p class="bottom-left">70</p>
+				</td>
+				<td class="sub-line1">
+					<p class="high-rigth">174,9668</p>
+					<p class="middle">Lu</p>
+					<p class="bottom-left">71</p>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td id="mini-cell"></td>
+				<td>
+					<p class="middle">**</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[227]</p>
+					<p class="middle">Ac</p>
+					<p class="bottom-left">89</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">232,0377</p>
+					<p class="middle">Th</p>
+					<p class="bottom-left">90</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">231,03588</p>
+					<p class="middle">Pa</p>
+					<p class="bottom-left">91</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">238,02891</p>
+					<p class="middle">U</p>
+					<p class="bottom-left">92</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[237]</p>
+					<p class="middle">Np</p>
+					<p class="bottom-left">93</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[244]</p>
+					<p class="middle">Pu</p>
+					<p class="bottom-left">94</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[243]</p>
+					<p class="middle">Am</p>
+					<p class="bottom-left">95</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[247]</p>
+					<p class="middle">Cm</p>
+					<p class="bottom-left">96</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[247]</p>
+					<p class="middle">Bk</p>
+					<p class="bottom-left">97</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[251]</p>
+					<p class="middle">Cf</p>
+					<p class="bottom-left">98</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[252]</p>
+					<p class="middle">Es</p>
+					<p class="bottom-left">99</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[257]</p>
+					<p class="middle">Fm</p>
+					<p class="bottom-left">100</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[258]</p>
+					<p class="middle">Md</p>
+					<p class="bottom-left">101</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[259]</p>
+					<p class="middle">No</p>
+					<p class="bottom-left">102</p>
+				</td>
+				<td class="sub-line2">
+					<p class="high-rigth">[266]</p>
+					<p class="middle">Lr</p>
+					<p class="bottom-left">103</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
