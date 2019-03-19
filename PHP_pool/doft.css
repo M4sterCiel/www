@@ -1,0 +1,169 @@
+
+body {
+	background-color: #505050;
+}
+
+img {
+	max-width: 100%;;
+}
+
+header {
+	background-color: #909090;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	box-shadow: 8px 8px 12px black;
+	border-radius: 12px;
+}
+
+div {
+	box-shadow: 8px 8px 12px black;
+	border-radius: 12px;
+}
+
+p {
+	margin-top: 1%;
+	margin-left: 2%;
+	padding-bottom: 0%;
+	margin-bottom: 0%;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 200;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.img-header {
+	width: 40%;
+	margin-left: 1.5%;
+}
+
+#reload {
+	position: absolute;
+	margin-left: 44%;
+	margin-top: 1%;
+	width: 1.5%;
+}
+
+#loupe {
+	position: absolute;
+	margin-left: 27.8%;
+	margin-top: 0.08%;
+	width: 16.5%;
+}
+
+#close {
+	position: absolute;
+	margin-top: 6%;
+	margin-left: 44%;
+	width: 1.5%;
+}
+
+.left-block {
+	position: absolute;
+	background-color: #909090;
+	width: 8%;
+	height: 35%;
+	margin-left: 12%;
+	margin-top: 20px;
+}
+
+.left-border {
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%
+}
+
+#arrow {
+	margin-top: 10%;
+}
+
+#chat-icon {
+	margin-bottom: 10%;
+}
+
+.middle-block {
+	position: absolute;
+	background-color: #909090;
+	width: 57%;
+	margin-left: 21%;
+	margin-top: 20px;
+}
+
+.main-img {
+	width: 98%;
+	margin: 1% 1% 1% 1%;
+}
+
+.rigth-block {
+	position: absolute;
+	background-color: #909090;
+	width: 8%;
+	height: 35%;
+	margin-left: 79%;
+	margin-top: 20px;
+}
+
+.rigth-border {
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%
+}
+
+#book {
+	margin-top: 10%;
+}
+
+#towel {
+	margin-right: 15%;
+}
+
+.brick-wall {
+	font-size: 0;
+	box-shadow: 0px 0px 0px black;
+	border-radius: 0px;
+}
+
+.brick1 {
+	margin-left: 10%;
+	margin-right: 0;
+	width: 20%;
+}
+
+.brick2 {
+	margin-left: 0;
+	width: 20%;
+}
+
+.brick3 {
+	width: 20%;
+}
+
+.last-block {
+	background-color: #88ff89;
+	position: absolute;
+	width: 28%;
+	height: 14.5%;
+	margin-top: 28.5%;
+	margin-left: 8.5%;
+}
+
+#sec-line {
+	font-style: italic;
+}
+
+#name {
+	margin-top: 1%;
+	margin-left: 2%;
+	font-size: 16px;
+}
+
+#button {
+	margin-left: 2%;
+	border-radius: 1px;
+	font-size: 16px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: lighter;
+}
