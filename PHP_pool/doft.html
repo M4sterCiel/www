@@ -8,20 +8,24 @@
 	<head>
 		<header>
 			<img class="img-header" src="resources/day_of_the_42.png" alt="Day of the 42">
-			<img id="reload" src="resources/reload.png" alt="Recharger">
+			<a title="Recommencer au début" href="https://www.disney.com"><img id="reload" src="resources/reload.png" alt="Recommencer au début"></a>
 			<img id="loupe" src="resources/loupe.png" alt="Loupe">
-			<img id="close" src="resources/close.gif" alt="Fermer">
+			<a title="Déconnecter" href="https://www.relaischateaux.com"><img id="close" src="resources/close.gif" alt="Fermer"></a>
 		</header>
 	</head>
 	<div class="left-block">
-		<img class="left-border" id="arrow" src="resources/arrow.png" alt="flèche">
-		<img class="left-border"src="resources/main.png" alt="Main">
-		<img class="left-border" src="resources/oeil.png" alt="Oeil">
-		<img class="left-border" src="resources/outil.png" alt="Outil">
-		<img class="left-border" id="chat-icon" src="resources/chat-icon.png" alt="Icone de chat">
+		<img class="left-border" id="arrow" title="Avancer" src="resources/arrow.png" alt="Avancer">
+		<img class="left-border" title="Prendre" src="resources/main.png" alt="Prendre">
+		<img class="left-border" id="regarder" title="Regarder" src="resources/oeil.png" alt="Regarder">
+		<img class="left-border" title="Utiliser" src="resources/outil.png" alt="Utiliser">
+		<img class="left-border" id="chat-icon" title="Parler" src="resources/chat-icon.png" alt="Parler">
 	</div>
 	<div class="middle-block">
-		<img class="main-img" src="resources/cluster.jpg" alt="cluster">
+		<img class="main-img" src="resources/cluster.jpg" alt="cluster" usemap="mapikea">
+		<map name="mapikea">
+			<area title="Apple" shape="rect" coords="811,324,1002,472" href="https://www.apple.com" alt="Apple">
+			<area title="Ikea" shape="rect" coords="330,330,428,475" href="https://www.ikea.com" alt="Ikea">
+		</map>
 	</div>
 	<div class="rigth-block">
 		<img class="rigth-border" id="book" src="resources/book.png" alt="Livre">
@@ -40,7 +44,7 @@
 		</div>
 	</div>
 	<div class="last-block">
-		<p>Vous <FONT size="6pt"> entrez</FONT> alors dans une grande pièce remplie d'ordinateurs...</p>
+		<p>Vous <FONT size="6pt"> entrez</FONT> alors dans une grande pièce remplie d'<span id="ordi">ordinateurs</span>...</p>
 		<p id="sec-line">- Bonjour, vous êtes nouveau içi ?</p>
 		<input type="text" id="name" name="name" required minlength="3" maxlength="10" size="45">
 		<button id="button">Repondre</button>

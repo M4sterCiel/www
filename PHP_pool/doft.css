@@ -79,6 +79,12 @@ p {
 	margin-top: 10%;
 }
 
+#regarder {
+	border: solid 0.3em;
+	border-color: red;
+	border-radius: 5px;
+}
+
 #chat-icon {
 	margin-bottom: 10%;
 }
@@ -166,4 +172,8 @@ p {
 	font-size: 16px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-weight: lighter;
+}
+
+#ordi {
+	text-shadow: 1px 6px 6px red;
 }

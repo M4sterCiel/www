@@ -1,0 +1,115 @@
+h1 {
+	font-size: 3vw;
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	margin-top: 50px;
+}
+
+img {
+	display: block;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	border-radius: 12px;
+}
+
+table {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tbody {
+	width: 80%;
+}
+
+.high-rigth {
+	text-align: right;
+	font-size: 0.6vw;
+	margin: 2%;
+}
+
+.middle {
+	text-align: center;
+	font-size: 1.2vw;
+	font-weight: bold;
+	margin: 2%;
+}
+
+.bottom-left {
+	text-align: left;
+	font-size: 0.6vw;
+	margin: 2%;
+}
+
+#mini-cell {
+	width: 20px;
+	background-color: white;
+}
+
+.first-line-left {
+	background-color: palegreen;
+	border: 2px solid black;
+}
+
+.first-col-left {
+	background-color: #ff6666;
+	border: 2px solid black;
+	;
+}
+
+.second-col {
+	background-color: navajowhite;
+	border: 2px solid black;
+}
+
+.heigtheenth-line-rigth {
+	background-color: #ffff99;
+	border: 2px solid black;
+}
+
+.first-line-rigth {
+	background-color: paleturquoise;
+	border: 2px solid black;
+}
+
+.fourteenth-line-rigth {
+	background-color: palegreen;
+	border: 2px solid black;
+}
+
+.thirteenth-line-rigth {
+	background-color: #cccc99;
+	border: 2px solid black;
+}
+
+.thirteenth-grey-line-rigth {
+	background-color: lightgrey;
+	border: 2px solid black;
+}
+
+.fourth-col {
+	background-color: lightpink;
+	border: 2px solid black;
+}
+
+.tenth-col {
+	background-color: whitesmoke;
+	border: 2px solid black;
+}
+
+.sub-line1 {
+	background-color: #ffbfff;
+	border: 2px solid black;
+}
+
+.sub-line2 {
+	background-color: #ff99cc;
+	border: 2px solid black;
+}
+
+.sub-table {
+	margin-top: 5%;
+}
