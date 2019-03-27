@@ -4,8 +4,13 @@
 function ft_split($str)
 {
 	$str = trim($str);
-	$my_tab = array_filter(explode(" ", $str));
-	sort($my_tab);
+	if ($str !== 0)
+	{
+		$my_tab = array_filter(explode(" ", $str), 'strlen');
+		sort($my_tab);
+	}
+	else
+		$my_tab[0] = "0";
 	return ($my_tab);
 }
 

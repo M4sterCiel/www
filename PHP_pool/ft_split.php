@@ -1,5 +1,5 @@
-#!/usr/bin/php
 <?php
+
 function ft_split($str)
 {
 	$str = trim($str);
@@ -7,3 +7,5 @@ function ft_split($str)
 	sort($my_tab);
 	return ($my_tab);
 }
+
+?>

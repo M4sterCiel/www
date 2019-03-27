@@ -14,4 +14,5 @@ function ft_is_sort($tab)
 	}
 	return (TRUE);
 }
+
 ?>
