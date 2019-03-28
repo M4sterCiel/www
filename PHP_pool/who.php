@@ -27,5 +27,5 @@ while ($sub)
 fclose($handle);
 sort($tab2);
 foreach ($tab2 as $elem)
-	echo $elem."\n";
+	echo $elem." \n";
 ?>
