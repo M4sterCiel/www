@@ -4,19 +4,22 @@
 if ($argc == 2)
 {
 	$opt = $argv[1];
-	$pattern = '/(http|https)/';
-	$opt = preg_replace($pattern, "https", $opt);
+	$pattern = '/http:/';
+	$opt = preg_replace($pattern, "https:", $opt);
 	if (($ch = curl_init($opt)) != FALSE)
 	{
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-		$file = curl_exec($ch);
+		if (($file = curl_exec($ch)) === FALSE)
+			exit();
 		$path = stristr($argv[1], "www");
+		if (preg_match("/\//", $path))
+			$path = strstr($path, "/", 1);
 		$pathlink = "https://".$path;
 		mkdir($path);
 		$i = 0;
 		while ($i != 1)
 		{
-			if (($str = stristr($file, "<img")) != FALSE)
+			if (($str = stristr($file, "<img")) !== FALSE)
 			{
 				if (($s = stristr($str, "\"/")))
 				{
@@ -49,8 +52,8 @@ if ($argc == 2)
 			else
 				$i = 1;
 		}
+		curl_close($ch);
 	}
-	curl_close($ch);
 }
 
 ?>

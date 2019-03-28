@@ -3,7 +3,7 @@
 
 if ($argc < 2)
 	return;
-$patern = '/  |\t| \t/';
+$patern = '/(  |\t| \t |\t\t)/';
 $replacement = ' ';
 $str = $argv[1];
 while (preg_match_all($patern, $str))
