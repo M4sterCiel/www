@@ -3,7 +3,8 @@
 if (isset($_GET["action"]) && isset($_GET["name"]))
 {
 	if ($_GET["action"] == "del")
-		setcookie($_GET["name"], "", -1);
+		if (isset($_COOKIE[$_GET["name"]]))
+			setcookie($_GET["name"], "", -1);
 	elseif ($_GET["action"] == "set") {
 		setcookie($_GET["name"], $_GET["value"]);
 	}
