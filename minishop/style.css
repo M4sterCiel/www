@@ -1,0 +1,537 @@
+body {
+    margin: 0;
+}
+.home_sections, .user_access
+{
+    list-style-type: none;
+    display: inline;
+    position: absolute;
+
+}
+
+.home_sections {
+    margin-left: 6%;
+    height: 50%;
+    margin-top: 1vw;
+}
+
+.user_access{
+    margin-left: 80%;
+    height: 50%;
+    margin-top: 1vw;
+}
+
+.home_sections a, .user_access a, .usr a
+{
+    font-family: monospace, "PT Mono";
+    text-decoration: none;
+    color: white;
+    font-size: 1vw;
+}
+
+.usr
+{
+    margin-top: 50px;
+    float: left;
+    list-style-type: none;
+    display: block;
+
+}
+
+#back_home
+{
+    float: right;
+}
+
+.logo
+{
+    object-fit: contain;
+    position: absolute;
+    height: 100%;
+    width: 4vw;
+}
+
+#homeheader, .user_area_header, #change_passwd_header,
+#delete_passwd_header, #login_passwd_header, #register_passwd_header{
+    position: relative;
+    height: 4vw;
+    background-color: #3a3e4c;
+}
+
+#change_passwd_header button, #delete_passwd_header button,
+#login_passwd_header button, #register_passwd_header button
+{
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    outline: none;
+}
+#change_passwd_header button:focus, #delete_passwd_header button:focus,
+#login_passwd_header button:focus, #register_passwd_header button:focus,
+.art_block>input:focus, .alert-success form>input, .alert-success li>a>button:focus,
+.art_block>form>input[type="submit"]
+{
+    outline: none;
+}
+
+#change_passwd_header a, #delete_passwd_header a,
+ #login_passwd_header a, #register_passwd_header a
+{
+    position: absolute;
+    width: 5%;
+    background: transparent;
+    height: 100%;
+}
+
+.home_img img
+{
+    width: 100%;
+    object-fit: contain;
+}
+.home_img
+{
+    width: 80%;
+    margin: 5% auto 5%;
+}
+
+
+/* Shop page */
+
+.art_block
+{
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    width: 48%;
+}
+
+.art_block_confirm{
+    width: 100%;
+}
+
+.div_confirm_order {
+    width: 49% !important;
+    display: inline-block !important;
+}
+
+.div_confirm_order form{
+    margin: 0 auto !important;
+    width: 54% !important;
+}
+.shop img, .articles img
+{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.shop p, .articles p, .shop form
+{
+    margin: 40px;
+    font-family: monospace, "PT Mono";
+    font-size: 20px;
+    color: darkred;
+}
+.shop {
+    margin: 2% 15% 0 15%;
+}
+.articles {
+    margin: 2% 15% 0 15%;
+}
+.shop div:hover p
+{
+    font-size: 60px;
+    color: orangered;
+}
+
+.shop input
+{
+    cursor: pointer;
+}
+
+
+/* Cruiser Page */
+.aricles img:hover
+{
+    width: 500px;
+}
+
+.articles button
+{
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 100px;
+}
+
+
+/* alerts */
+
+.alert-success
+{
+    color: white;
+    width: 35%;
+    margin: 15% auto 0;
+    border-radius: 5px;
+    background-color: #7ed8a6;
+    padding: 2%;
+    box-shadow: 4px 4px 18px #3a3e4c;
+    
+}
+
+.alert-success p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.alert-success li
+{
+    list-style-type: none;
+    padding: 20px;
+    display: inline-block;
+}
+.alert-success form>input:focus{
+    outline: none;
+}
+.alert-success form>input, .alert-success li>a>button{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black;
+    border:none;
+}
+.alert-success ul{
+    margin-top: 8%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-fail
+{
+    background-color:lightcoral;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.alert-success_register
+{
+    background-color: #7ed8a6;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.alert-fail p {
+    text-align: center;
+}
+
+.container
+{
+    position: absolute;
+    margin: 35% 0 auto;
+    width: 100%;
+}
+
+.container_order
+{
+    position: absolute;
+    margin: 15% 0 auto;
+    width: 100%;
+}
+.container_order a>button {
+    width: 14%;
+    padding: 2%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 1px 1px 6px black;
+    color: white;
+    font-size: 14px;
+    background-color: red;
+    cursor: pointer;
+}
+.container_order a>button:focus {
+    outline: none;
+}
+
+.container_chpass
+{
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container_chpass>.alert-success_changed
+{
+    background-color: #7ed8a6;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+
+/* buttons */
+
+form input[type=submit][name=categ], form input[type=submit][name=order]
+{
+    width: 140px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+form input[type=submit][name=order]
+{
+    background-color: mediumseagreen;
+    margin: 0;
+}
+
+form input[type=submit][name=categ]
+{
+    background-color: lightcoral;
+}
+
+.shop form
+{
+    padding-top: 60px;
+}
+
+.articles form input
+{
+    margin-right: 20%;
+}
+
+.alert-success a button, .alert-success input
+{
+    width: 140px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+}
+
+.alert-success form input[name=categ]
+{
+    background-color: mediumseagreen;
+}
+
+/* forms */
+
+/* cart */
+
+.cart_block
+{
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+}
+
+.cart img
+{
+    width: 200px;
+    margin: 40px;
+    margin-left: 200px;
+    float: left;
+}
+
+.cart p, .cart form
+{
+    margin: 40px;
+    font-family: monospace, "PT Mono";
+    font-size: 20px;
+    color: darkred;
+}
+
+.cart div
+{
+    width: 100%;
+}
+
+.cart input
+{
+    cursor: pointer;
+}
+
+.cart form
+{
+    margin-top: 0.1vw;
+    margin-left: 0.5vw;
+}
+
+.empty
+{
+    margin-top: 10vw;
+    margin-left: -2vw;
+    text-align: center;
+}
+
+.form_change_passwd, .form_delete_passwd, .form_login_usr, .form_register_usr {
+    width: 30%;
+    margin: 1% auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 2%;
+    box-shadow: 4px 4px 18px #3a3e4c;
+}
+
+.form_change_passwd>input[type="password"], .form_change_passwd>input[type="text"],
+.form_delete_passwd>input[type="password"], .form_delete_passwd>input[type="text"],
+.form_login_usr>input[type="password"], .form_login_usr>input[type="text"],
+.form_register_usr>input[type="password"], .form_register_usr>input[type="text"]{
+    width: 100%;
+    display: block;
+    border: none;
+    margin: 8% 0;
+    border-bottom: 2px solid #3a3e4c;
+    outline:none;
+    background: transparent;
+    font-size: 14px;
+}
+.form_delete_passwd>input[type="password"], .form_delete_passwd>input[type="text"],
+.form_login_usr>input[type="password"], .form_login_usr>input[type="text"]
+.form_register_usr>input[type="password"], .form_register_usr>input[type="text"]{
+    margin: 3% 0;
+}
+
+.form_change_passwd>input[type="submit"], .form_delete_passwd>input[type="submit"],
+.form_login_usr>input[type="submit"], .form_register_usr>input[type="submit"]{
+    background-color: #3c763d;
+    padding: 3%;
+    color: white;
+    border-radius: 7px;
+    width: 100%;
+    outline:none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top:4%;
+}
+
+.form_change_passwd>input[type="text"]:focus, .form_change_passwd>input[type="password"]:focus,
+.form_delete_passwd>input[type="text"]:focus, .form_delete_passwd>input[type="password"]:focus,
+.form_login_usr>input[type="text"]:focus, .form_login_usr>input[type="password"]:focus,
+.form_register_usr>input[type="text"]:focus, .form_register_usr>input[type="password"]:focus {
+    border: none !important;
+    border-bottom: 2px solid red !important;
+}
+.form_register_usr p{
+    color: rgb(189, 72, 72);
+    text-align: center;
+}
+input:-webkit-autofill {
+    background: transparent !important;
+}
+/* usr area */
+.usr_sections
+{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20%;
+    height: 100%;
+    margin-top: 1%;
+}
+
+#user_area_header>div.home_sections
+{
+    margin-left: 68%;
+}
+
+#user_area_header>div.usr_sections
+{
+    margin-left: 6%;
+}
+
+.usr_sections a, .user_sections form
+{
+    font-family: monospace, "PT Mono";
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.home_sections a:hover, .user_access a:hover,
+#register_passwd_header>a>button:hover,
+#login_passwd_header>a>button:hover
+{
+    color:red !important;
+}
+
+/* adm area */
+
+.adm_orders
+{
+    width: 50%;
+    height:50%;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.adm_itemsorders
+{
+    width: 100%;
+}
+
+.adm_orders td, .adm_orders th, .adm_itemsorders td, .adm_itemsorders th
+{
+    padding: 10px;
+
+}
+
+/* admin articles */
+.create_article, .create_category
+{
+    display: inline-block;
+    width: 2000px;
+}
+
+.adm_art_tab, .adm_user_tab, .adm_sect_tab
+{
+    margin-left: 15%;
+    border: 2px solid black;
+    width: 60%;
+    font-size: 20px;
+}
+
+.adm_art_tab td, .adm_user_tab td, .adm_sect_tab td
+{
+    border: 2px solid seagreen;
+    text-align: center;
+}
+
+.adm_art_tab form, .create_art form, .adm_edit_usr
+{
+    font-size: 20px;
+}
+
+.edit_art, .create_art, .add_art_categ, .adm_edit_usr
+{
+    margin-top: 40px;
+    margin-left: 15%;
+}
+
+.adm_edit_art input, .edit_art input, .create_art input, .add_art_categ input, .adm_edit_usr input
+{
+    width: 15%;
+    font-size: 20px;
+}
+
+.adm_art_tab td img, .adm_sect_tab td img
+{
+    width: 50px;
+}
+
+/* admin sections */
+.sections_options
+{
+    margin-left: 28%;
+}
+
+.sections_options input
+{
+    font-size: 20px;
+    padding-right: 50px;
+    padding-left:50px;
+}
