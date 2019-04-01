@@ -5,7 +5,6 @@
         ?>
         <div class="container">
             <div class="alert-fail">
-                <p>Ops!</p>
                 <p>The login and password you typed are incorrect!</p>
             </div>
         </div>
@@ -23,10 +22,10 @@
             display_error();
         }
         else {
-                $_SESSION['logd_usr'] = db_security($conn, $post_log);
-                $_SESSION['isAdm'] = db_security($conn, $data['isAdm']);
-                mysqli_close($conn);
-                header('Location: ../index.php');
+            $_SESSION['logd_usr'] = db_security($conn, $post_log);
+            $_SESSION['isAdm'] = db_security($conn, $data['isAdm']);
+            mysqli_close($conn);
+            header('Location: ../index.php');
         }
     }
     else if (isset($_POST['submit']) AND $_POST['submit'] === "OK")
@@ -35,8 +34,9 @@
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Login</title>
+        <title src="../img/logo42.ico">Mini42shop Login</title>
         <link rel="stylesheet" href="../style.css">
+        <link rel="shortcut icon" href="../img/logo42.ico">
     </head>
 
     <body>
@@ -50,3 +50,6 @@
     </form>
     </body>
     </html>
+	<footer>
+	<p>© 2019 MiniShop</p>
+</footer>

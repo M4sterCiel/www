@@ -1,10 +1,10 @@
 <div id="homeheader">
-    <img class="logo" src="https://previews.123rf.com/images/feabornset/feabornset1502/feabornset150200573/36445119-vecteur-symbole-graphique-de-l-aile-abstraite-pour-votre-entreprise-avec-le-texte-de-l-%C3%A9chantill.jpg">
-
+    <img class="logo" src="img/toplogo.png">
     <div class="home_sections">
         <a href="index.php">Home   </a>
         <a href="shop.php">  Shop   </a>
-        <a href="cart.php">Cart</a>
+		<a href="cart.php">Cart<?php
+		echo "[".count($_SESSION['cart'])."]";?></a>
     </div>
     <div class="user_access">
         <?php

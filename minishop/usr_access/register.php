@@ -4,11 +4,16 @@
     function    account_created() {
 ?>
         <!DOCTYPE html>
-        <html><head></head>
+        <html>
+        <head>
+            <title src="../img/logo42.ico">Mini42shop Register</title>
+            <link rel="shortcut icon" href="../img/logo42.ico">
+        </head>
         <body>
         <div class="container">
             <div class="alert-success_register">
                 <p>Account successfully created.</p>
+				<?php header("refresh:3;url=../index.php");?>
             </div>
         </div>
         </body>
@@ -41,8 +46,6 @@
                 <p>The username and password are not valid!</p>
                 <p>please try again.</p>
             </div>
-
-            </a>
         </div>
         </body>
         </html>
@@ -89,3 +92,6 @@
     </form>
 </body>
 </html>
+<footer>
+	<p>© 2019 MiniShop</p>
+</footer>

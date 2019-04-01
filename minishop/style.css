@@ -1,5 +1,39 @@
 body {
-    margin: 0;
+	margin: 0;
+}
+
+#scrollUp:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.inst {
+  margin: 0 35vw;
+  font-family: monospace;
+  font-size: 18px;
+}
+.redirection{
+	width: 100px;
+	margin-top: 50px;
+	text-align: center;
+}
+footer {
+	position: absolute;
+	bottom:0;
+	width:100%;
+	padding-top:50px;
+	height:50px;
+	display: flex;
+    justify-content: right;
+    padding: 5px;
+    background-color:rgb(58, 62, 76);
+    color:whitesmoke;
+}
+
+.mySlides {
+	display:none;
+	animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}
 }
 .home_sections, .user_access
 {
@@ -179,7 +213,7 @@ body {
     background-color: #7ed8a6;
     padding: 2%;
     box-shadow: 4px 4px 18px #3a3e4c;
-    
+
 }
 
 .alert-success p {
@@ -469,9 +503,43 @@ input:-webkit-autofill {
     margin-top: 5%;
 }
 
+#back_top {
+	position: fixed;
+	opacity: 0.5;
+	right: 10px;
+	bottom: 70px;
+}
+
+#back_page {
+	position: fixed;
+	opacity: 0.5;
+	right: 10px;
+	bottom: 120px;
+}
+
+#shop-button {
+	position: absolute;
+	margin-top: 45%;
+	text-decoration: none;
+	text-align: center;
+	color: whitesmoke;
+	font-size: 335%;
+	font-weight: lighter;
+	font-family: 'CenturyGothic';
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	z-index: 3;
+	width: 100%;
+	background-color:#3a3e4c;
+}
+
+#logo_top_img {
+	width: 40px;
+}
 .adm_itemsorders
 {
-    width: 100%;
+	width: 100%;
 }
 
 .adm_orders td, .adm_orders th, .adm_itemsorders td, .adm_itemsorders th

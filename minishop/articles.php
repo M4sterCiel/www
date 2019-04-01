@@ -16,8 +16,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Articles</title>
+    <title src="img/logo42.ico">Mini42shop RUSH</title>
     <link rel="stylesheet" href="style.css">
+    <a name="logo"><link rel="shortcut icon" href="img/logo42.ico"></a>
 </head>
 <body>
 <?php include('includes/menu.php'); ?>
@@ -40,6 +41,14 @@
             </div>
             <?php
         }
-        ?>
+		?>
+<div id="scrollUp">
+<a id="back_page" href="shop.php"><img id="logo_top_img" src="img/back-logo.svg"/></a>
+</div>
+</div>
+</div>
+<div id="scrollUp">
+<a id="back_top" href="#logo"><img id="logo_top_img" src="img/back_to_top.png"/></a>
 </div>
 </body>
+</html>
