@@ -9,6 +9,52 @@ Class Vector {
     private $_coord_w;
 
 
+    public function __construct( array $kwargs ) {
+        if (self::$verbose === TRUE)
+        return;
+    }
+
+    public function __destruct() {
+        if (self::$verbose === TRUE)
+        return;
+    }
+
+    public function magnitude() {
+        return;
+    }
+
+    public function Vector normalize() {
+
+    }
+
+    public function Vector add( Vector $rhs ) {
+
+    }
+
+    public function Vector sub( Vector $rhs ) {
+
+    }
+
+    public function Vector opposite() {
+
+    }
+  
+    public function Vector scallarProduct( $k ) {
+
+    }
+
+    public function float dotProduct( Vector $rhs ) {
+
+    }
+
+    public function float cos( Vector $rhs ) {
+
+    }
+
+    public function Vector crossProduct( Vector $rhs ) {
+
+    }
+
     public function getXmagn() {
         return ($this->_mag_x);
     }
@@ -20,10 +66,6 @@ Class Vector {
     }
     public function getWcoord() {
         return ($this->_coord_w);
-    }
-    
-    public function __construct( array $kwargs) {
-        return;
     }
 
     public function __toString() {
