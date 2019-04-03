@@ -12,10 +12,14 @@ Class Vector {
 
 
     public function __construct( array $kwargs ) {
-        if (isset($kwargs['dest']) && $kwargs['dest'] instanceof Vertex) {
-            if (isset($kwargs['orig']) && $kwargs['orig'] instanceof Vertex) {
+        if (isset($kwargs['dest']) && $kwargs['dest'] instanceof Vertex) 
+        {
+            if (isset($kwargs['orig']) && $kwargs['orig'] instanceof Vertex) 
+            {
                 $orig = new Vertex(array('x' => $kwargs['orig']->getX(), 'y' => $kwargs['orig']->getY(), 'z' => $kwargs['orig']->getZ()));
-            } else {
+            } 
+            else 
+            {
                 $orig = new Vertex(array('x' => 0, 'y' => 0, 'z' => 0));
             }
             $this->_mag_x = $kwargs['dest']->getX() - $orig->getX();
@@ -29,7 +33,7 @@ Class Vector {
 
     public function __destruct() {
         if (self::$verbose === TRUE)
-            printf("Vector( x:%0.2f, y:%0.2f, z:%0.2f, w:%0.2f ) constructed\n", $this->_mag_x, $this->_mag_y, $this->_mag_z, $this->_coord_w);
+            printf("Vector( x:%0.2f, y:%0.2f, z:%0.2f, w:%0.2f ) destructed\n", $this->_mag_x, $this->_mag_y, $this->_mag_z, $this->_coord_w);
     }
 
     public function magnitude() {  // Formule pour calculer la norme d'un vecteur: √(x² + y² + z²)
@@ -38,22 +42,21 @@ Class Vector {
 
     public function normalize() {
         $norm = $this->magnitude();
-        if ($norm == 1)
-            return clone $this;
+        return (new Vector(['dest' => new Vertex(['x' => $this->_mag_x / $norm, 'y' => $this->_mag_y / $norm, 'z' => $this->_mag_z / $norm])]));
     }
 
     public function add( $rhs ) { // Faire la somme de  x y z des deux vecteurs puis les retourner dans un nouveau vertex puis dans un nouveau vecteur
-        $x = $this->_mag_x + $rhs->_x;
-        $y = $this->_mag_y + $rhs->_y;
-        $z = $this->_mag_z + $rhs->_z;
+        $x = $this->_mag_x + $rhs->getXmagn();
+        $y = $this->_mag_y + $rhs->getYmagn();
+        $z = $this->_mag_z + $rhs->getZmagn();
         $res = new Vertex ( array ( 'x' => $x, 'y' => $y, 'z' => $z, 'w' => 0.0));
         return (new Vector( array ('dest' => $res)));
     }
 
     public function sub( $rhs ) {
-        $x = $this->_mag_x - $rhs->_x;
-        $y = $this->_mag_y - $rhs->_y;
-        $z = $this->_mag_z - $rhs->_z;
+        $x = $this->_mag_x - $rhs->getXmagn();
+        $y = $this->_mag_y - $rhs->getYmagn();
+        $z = $this->_mag_z - $rhs->getZmagn();
         $res = new Vertex ( array ( 'x' => $x, 'y' => $y, 'z' => $z, 'w' => 0.0));
         return (new Vector( array ('dest' => $res)));
     }
@@ -75,23 +78,22 @@ Class Vector {
     }
 
     public function dotProduct( $rhs ) {
-        $x = $this->_mag_x * $rhs->_x;
-        $y = $this->_mag_y * $rhs->_y;
-        $z = $this->_mag_z * $rhs->_z;
+        $x = $this->_mag_x * $rhs->getXmagn();
+        $y = $this->_mag_y * $rhs->getYmagn();
+        $z = $this->_mag_z * $rhs->getZmagn();
         return ($x + $y + $z);
     }
 
-    public function cos( $rhs ) { // cos = produit scalaire des vecteurs A et B divisé par la racine carrée de la norme de A + racine carrée de la norme de B
-        return ($this->_x * $rhs->_x + $this->_y * $rhs->_y + $this->_z * $rhs->_z) / 
-        sqrt(($this->_x * $this->_x + $this->_y * $this->_y + $this->_z * $this->_z) * ($rhs->_x * $rhs->_x +
-              $rhs->_y * $rhs->_y + $rhs->_z * $rhs->_z));
+    public function cos(Vector $rhs ) { // cos = produit scalaire des vecteurs A et B divisé par la racine carrée de la norme de A + racine carrée de la norme de B
+        $cos = (float)($this->dotProduct($rhs) / (sqrt(pow($this->_mag_x, 2) + pow($this->_mag_y, 2) + pow($this->_mag_z, 2)) * $rhs->magnitude()));
+        return $cos;
     }
 
-    public function crossProduct( $rhs ) {
+     public function crossProduct( $rhs ) {
         return new Vector(array('dest' => new Vertex(array(
-            'x' => $this->_y * $rhs->getZmagn() - $this->_z * $rhs->getYmagn(),
-            'y' => $this->_z * $rhs->getXmagn() - $this->_x * $rhs->getZmagn(),
-            'z' => $this->_x * $rhs->getYmagn() - $this->_y * $rhs->getXmagn()
+            'x' => $this->_mag_y * $rhs->_mag_z - $this->_mag_z * $rhs->_mag_y,
+            'y' => $this->_mag_z * $rhs->_mag_x - $this->_mag_x * $rhs->_mag_z,
+            'z' => $this->_mag_x * $rhs->_mag_y - $this->_mag_y * $rhs->_mag_x
         ))));    }
 
     public function getXmagn() {

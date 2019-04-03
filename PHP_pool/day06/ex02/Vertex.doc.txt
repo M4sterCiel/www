@@ -1,0 +1,13 @@
+
+<- Vertex ----------------------------------------------------------------------
+The vertex class handles vectex.
+
+It expects an array with the following keys:
+	=> 'x' : X coordinates, obligatory.
+	=> 'y' : Y coordinates, obligatory
+	=> 'z' : X coordinates, obligatory
+	=> ’w’ :  optional, take 1.0 by default.
+	=> ’color’ : color of the vertex which is an instance of the Color class (by default white)
+
+You can set the attribute verbose at True or False to get information on the class process.
+---------------------------------------------------------------------- Vertex ->
