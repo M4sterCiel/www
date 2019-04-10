@@ -28,6 +28,10 @@ Class Vertex {
         }
     }
 
+    public function __get( $attr ) {
+        return ($this->$attr);
+    }
+
     public function getX() {
         return ($this->_x);
     }
