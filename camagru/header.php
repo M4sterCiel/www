@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="Description" content="Camagru">
         <meta title="Camagru">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
 </head>
 <header>
     <nav>
