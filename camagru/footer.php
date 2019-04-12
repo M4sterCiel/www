@@ -1,0 +1,1 @@
+<div class="footer">© Camagru 2019</div>

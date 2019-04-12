@@ -14,14 +14,6 @@
     <a href="forgotten_pwd.php"><input type="button" value="Forgot your password"></a><br>
     <a href="register.php"><input type="button" value="Sign up"></a>
     <script type="text/javascript" src="login.js"></script>
-    <div>
-    <?php
-
-require "config/App.Class.php";
-
-$res = getDB()->query('SELECT * FROM users');
-var_dump($res);
-?></div>
     </body>
+    <?php require 'footer.php';?>
     </html>
-    
