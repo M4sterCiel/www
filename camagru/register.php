@@ -7,7 +7,7 @@
     </div>
     <br>
     <br>
-    <form method="POST" class="form_login_usr">
+    <form method="POST" class="form_register_usr">
         <input type="text" name="firstname" value="" placeholder="Will"><br>
         <input type="text" name="lastname" value="" placeholder="Smith"><br>
         <input type="email" name="email" value="" placeholder="example@123.com"><br>

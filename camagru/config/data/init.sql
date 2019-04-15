@@ -17,7 +17,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
   CREATE TABLE gallery (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     user_id INT(11) NOT NULL,
-    pic_link VARCHAR(50) NOT NULL,
+    pic_link MEDIUMTEXT NOT NULL,
     nb_like iNT(11),
     date TIMESTAMP
   );
@@ -25,7 +25,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
   CREATE TABLE comments (
   id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT(11) NOT NULL,
-  pic_link VARCHAR(50) NOT NULL,
+  pic_link MEDIUMTEXT NOT NULL,
   nb_like INT(11),
   comment VARCHAR(120),
   date TIMESTAMP
