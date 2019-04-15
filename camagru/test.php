@@ -1,20 +1,17 @@
 <?php
 require "model.php";
-echo $_POST['email']."<br/>";
-echo $_POST['passwd']."\n";
 $mail =  $_POST['email'];
 $passwd = $_POST['passwd'];
 $passwd = hash('whirlpool', $passwd);
-try {
-    $res = db_connect();
-    $stmt = $res->query("SELECT * FROM users WHERE email LIKE '$mail'");
-}
-catch (PDOException $e) {
-    echo 'Connexion échouée : ' . $e->getMessage();
-}
+$res = db_connect();
+if (!$stmt = $res->query("SELECT * FROM users WHERE email LIKE '$mail'"))
+    echo "An error has occured";
 while($row = $stmt->fetch()) {
+    if ($row["email"] != $mail)
+        echo "Incorrect email or password!";
     if ($passwd == $row["password"])
     {
-        echo "Bravo, c'est le bon mdp!<br/>";
+        $granted = 1;
+        echo "Access granted!<br/>";
     }
 }
