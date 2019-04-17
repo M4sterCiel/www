@@ -1,4 +1,8 @@
-<?php include "header.php";?>
+
+<?php 
+session_start();
+include "header.php";
+?>
 <!DOCTYPE html>
     <html>
     </head>
@@ -13,7 +17,7 @@
     </form>
     <a href="forgotten_pwd.php"><input type="button" value="Forgot your password"></a><br>
     <a href="register.php"><input type="button" value="Sign up"></a>
-    <div id="blabla"></div>
+    <div id="log-in"></div>
     </body>
     <script type="text/javascript" src='login.js'></script>
     <?php require 'footer.php';?>

@@ -11,9 +11,15 @@
     <nav>
         <ul>
             <li><a href="#">Take a picture</a></li>
-            <li><a href="">Home</a></li>
-            <li class="nav-right"><a href="">Logout</a></li>
-            <li class="nav-right"><a href="">Account</a>
+            <li><a href="/index.php">Home</a></li>
+            <li class="nav-right"><a href="logout.php">Logout</a></li>
+            <?php
+            echo $_SESSION['user'];
+            if ($_SESSION['logd_on'] == 'ok')
+                echo "<li class=\"nav-right\"><a href=\"\">" . $_SESSION['user'] . "</a>";
+            else
+                echo "<li class=\"nav-right\"><a href=\"\">Account</a>";
+            ?>
                 <ul class="niveau1">
                     <li><a href="">See my profile</a></li>
                     <li><a href="">Edit my profile</a></li>

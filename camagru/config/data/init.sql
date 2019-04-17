@@ -7,7 +7,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password MEDIUMTEXT NOT NULL,
     age INT(3),
     private_question VARCHAR(110),
     private_answer VARCHAR(110),
