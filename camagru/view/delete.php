@@ -13,7 +13,7 @@ include "footer.php";?>
     <label for="scdpasswd">Confirm your password</label>
     <input type="password" name="scdpasswd" id="del-passwd2" required><br>
     <input type="button" id="del-btn" value="Delete my account" onclick="checkForm(event)">
-    <script type="text/javascript" src="delete.js"></script>
+    <script type="text/javascript" src="js/delete.js"></script>
     </form>
     </body>
     <div id="del-div"></div>

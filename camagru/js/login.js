@@ -11,7 +11,7 @@ function checkForm(event) {
           setTimeout(function(){document.location.replace('index.php');}, 3000);
       }
     };
-    xhttp.open("POST", "check_usr.php", true);
+    xhttp.open("POST", "usr/check_usr.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("email=" + mail + "&passwd=" + passwd);
   }

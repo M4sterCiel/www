@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "model.php";
+require "../model.php";
 if ($_POST['passwd'] != $_POST['passwd2'])
 {
     echo "Incorrect password!";

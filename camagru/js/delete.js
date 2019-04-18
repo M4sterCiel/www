@@ -12,7 +12,7 @@ function checkForm(event) {
             setTimeout(function(){document.location.replace('index.php');}, 3000);
         }
         };
-        xhttp.open("POST", "delete_usr.php", true);
+        xhttp.open("POST", "usr/delete_usr.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("passwd=" + passwd + "&passwd2=" + passwd2);
 }

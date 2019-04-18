@@ -19,6 +19,6 @@ include "header.php";
     <a href="register.php"><input type="button" value="Sign up"></a>
     <div id="log-in"></div>
     </body>
-    <script type="text/javascript" src='login.js'></script>
+    <script type="text/javascript" src='js/login.js'></script>
     <?php require 'footer.php';?>
     </html>
