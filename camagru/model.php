@@ -18,4 +18,25 @@ function db_connect() {
         return $database;
 }
 
+function db_check($table, $field, $comp1, $comp2) {
+    try {
+        $sql = "SELECT $field FROM $table WHERE $comp1 LIKE '$comp2'";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $result = $stmt->fetchAll();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
+function db_delete_usr($mail) {
+    try {
+        $sql = "DELETE FROM users WHERE email LIKE '$mail'";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
 ?>

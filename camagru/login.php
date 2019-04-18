@@ -11,7 +11,7 @@ include "header.php";
     <br>
     <br>
     <form method="POST" class="form_login_usr">
-        <input id="mail-login" type="mail" name="email" value="" placeholder="example@123.com"><br>
+        <input id="mail-login" type="mail" name="email" value="" placeholder="example@123.com" autofocus><br>
         <input id="passwd-login" type="password" name="passwd" value="" placeholder="password"><br>
         <button type="submit" name="submit" value="OK" onclick="checkForm(event)">OK</button>
     </form>

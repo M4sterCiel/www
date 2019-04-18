@@ -11,6 +11,8 @@ function checkForm(event) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("register").innerHTML = this.responseText;
+        if (this.responseText == "Successfully registered!")
+            setTimeout(function(){document.location.replace('index.php');}, 3000);
       }
     };
     xhttp.open("POST", "add_user.php", true);
