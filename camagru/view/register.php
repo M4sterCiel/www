@@ -28,6 +28,6 @@
         <button type="submit" name="submit" value="OK" onclick="checkForm(event)">Create my account</button>
     </form>
     <div id="register"></div>
-    <script type="text/javascript" src="js/register.js"></script>
+    <script type="text/javascript" src="../js/register.js"></script>
     </body>
     </html>

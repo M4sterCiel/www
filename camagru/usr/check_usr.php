@@ -1,10 +1,10 @@
 <?php
 session_start();
 require "../model.php";
-$mail =  $_POST['email'];
+$user =  $_POST['user'];
 $passwd = $_POST['passwd'];
 $passwd = hash('whirlpool', $passwd);
-if (($result = db_check('users', '*', 'email', $_POST['email'])) || ($result = db_check('users', '*', 'username', $_POST['username'])))
+if (($result = db_check('users', '*', 'username', $_POST['user'])))
 {
     if ($result[0]['password'] == $passwd)
     {
@@ -14,5 +14,5 @@ if (($result = db_check('users', '*', 'email', $_POST['email'])) || ($result = d
         $_SESSION['email'] = $result[0]['email'];
     }
     else
-        echo "Incorrect email or password!";
+        echo "Incorrect username or password!";
 }

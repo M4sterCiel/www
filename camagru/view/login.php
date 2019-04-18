@@ -11,7 +11,7 @@ include "header.php";
     <br>
     <br>
     <form method="POST" class="form_login_usr">
-        <input id="mail-login" type="mail" name="email" value="" placeholder="example@123.com" autofocus><br>
+        <input id="user-login" type="text" name="username" value="" placeholder="Username" autofocus><br>
         <input id="passwd-login" type="password" name="passwd" value="" placeholder="password"><br>
         <button type="submit" name="submit" value="OK" onclick="checkForm(event)">OK</button>
     </form>
@@ -19,6 +19,6 @@ include "header.php";
     <a href="register.php"><input type="button" value="Sign up"></a>
     <div id="log-in"></div>
     </body>
-    <script type="text/javascript" src='js/login.js'></script>
+    <script type="text/javascript" src='../js/login.js'></script>
     <?php require 'footer.php';?>
     </html>
