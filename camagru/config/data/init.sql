@@ -7,10 +7,11 @@ CREATE DATABASE IF NOT EXISTS camagru;
     username VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password MEDIUMTEXT NOT NULL,
-    age INT(3),
     private_question VARCHAR(110),
     private_answer VARCHAR(110),
     notif TINYINT(1),
+    `key` VARCHAR(32) NULL,
+    active TINYINT(1) DEFAULT '0',
     date TIMESTAMP
   );
 

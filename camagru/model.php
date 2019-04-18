@@ -39,4 +39,14 @@ function db_delete_usr($mail) {
     }
 }
 
+function db_update_usr($field, $var, $user) {
+    try {
+        $sql = "UPDATE users SET '$field'='$var' WHERE username LIKE $user";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
 ?>
