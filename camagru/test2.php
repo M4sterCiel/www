@@ -1,4 +1,4 @@
 <?php
 
-$pass = hash('whirlpool', 'logitech');
+$pass = hash('whirlpool', 'merde');
 echo $pass;
