@@ -13,7 +13,4 @@ function checkForm(event) {
     xhttp.open("POST", "test.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("email=" + mail + "&passwd=" + passwd);
-    console.log(this.responseText);
-    if (this.responseText == 'Access granted!<br/>')
-      document.location.replace('index.php');
   }

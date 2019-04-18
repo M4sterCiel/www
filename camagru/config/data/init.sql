@@ -11,6 +11,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
     age INT(3),
     private_question VARCHAR(110),
     private_answer VARCHAR(110),
+    notif TINYINT(1),
     date TIMESTAMP
   );
 
