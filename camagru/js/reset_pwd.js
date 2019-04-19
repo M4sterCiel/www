@@ -1,5 +1,7 @@
 function checkForm(event) {
     event.preventDefault();
+    var username = window.location.pathname;
+    console.log(username);
     var nwpwd = document.getElementById("nwpwd").value;
     var nwpwd2 = document.getElementById("nwpwd2").value;
     var xhttp = new XMLHttpRequest();
@@ -10,7 +12,7 @@ function checkForm(event) {
           setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
       }
     };
-    xhttp.open("POST", "../usr/nw_pwd.php", true);
+    xhttp.open("POST", "/camagru/usr/nw_pwd.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("nwpwd=" + nwpwd + "&nwpwd2=" + nwpwd2);
   }
