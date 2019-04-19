@@ -1,4 +1,6 @@
-<?php include "header.php";
+<?php 
+session_start();
+include "header.php";
 include "footer.php";?>
 <!DOCTYPE html>
     <html>
@@ -12,8 +14,8 @@ include "footer.php";?>
     <input type="password" name="passwd" id="del-passwd" autofocus required><br>
     <label for="scdpasswd">Confirm your password</label>
     <input type="password" name="scdpasswd" id="del-passwd2" required><br>
-    <input type="button" id="del-btn" value="Delete my account" onclick="checkForm(event)">
-    <script type="text/javascript" src="js/delete.js"></script>
+    <input type="submit" id="del-btn" value="Delete my account" onclick="checkForm(event)">
+    <script type="text/javascript" src="/camagru/js/delete.js"></script>
     </form>
     </body>
     <div id="del-div"></div>

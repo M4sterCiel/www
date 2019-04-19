@@ -9,10 +9,10 @@ function checkForm(event) {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("del-div").innerHTML = this.responseText;
             if (this.responseText == "Your account have been deleted successfully!")
-            setTimeout(function(){document.location.replace('index.php');}, 3000);
+            setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
         }
         };
-        xhttp.open("POST", "usr/delete_usr.php", true);
+        xhttp.open("POST", "../usr/delete_usr.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("passwd=" + passwd + "&passwd2=" + passwd2);
 }

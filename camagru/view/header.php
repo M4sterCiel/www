@@ -17,7 +17,7 @@
                 <ul class="niveau1">
                     <li><a href="">See my profile</a></li>
                     <li><a href="">Edit my profile</a></li>
-                    <li><a href="delete.php">Delete my account</a></li>
+                    <li><a href="/camagru/view/delete.php">Delete my account</a></li>
                 </ul>
             </li>
         </ul>

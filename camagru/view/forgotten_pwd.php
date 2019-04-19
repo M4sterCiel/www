@@ -5,7 +5,7 @@
     <br>
     <br>
     <form method="POST" class="form_forgotten_usr">
-        <input id="usr-fpwd" type="text" name="username" placeholder="Username" required><br>
+        <input id="usr-fpwd" type="text" name="username" placeholder="Username" autofocus required><br>
         <select name="private_question" id="private-quest">
             <option value="birth-city">What is the city you were born?</option>
             <option value="first-pet">What is the name of your first pet?</option>

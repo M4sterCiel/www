@@ -1,14 +1,12 @@
 function checkForm(event) {
     event.preventDefault();
-    var username = window.location.pathname;
-    console.log(username);
     var nwpwd = document.getElementById("nwpwd").value;
     var nwpwd2 = document.getElementById("nwpwd2").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("reset-div").innerHTML = this.responseText;
-        if (this.responseText == "Your password has been updated!")
+        if (this.responseText == "Your password has been updated successfully!")
           setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
       }
     };

@@ -13,7 +13,7 @@ include "header.php";
     <form method="POST" class="form_login_usr">
         <input id="user-login" type="text" name="username" value="" placeholder="Username" autofocus><br>
         <input id="passwd-login" type="password" name="passwd" value="" placeholder="password"><br>
-        <input type="submit" name="submit" value="OK" onclick="checkForm(event)">OK</button>
+        <input type="submit" name="submit" value="Enter" onclick="checkForm(event)">
     </form>
     <a href="forgotten_pwd.php"><input type="button" value="Forgot your password"></a><br>
     <a href="register.php"><input type="button" value="Sign up"></a>

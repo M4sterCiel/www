@@ -19,3 +19,5 @@ if ($result = db_check('users', '*', 'email', $_SESSION['email']))
     else
         echo "Incorrect password!";
 }
+else
+    echo "An error has occured!";
