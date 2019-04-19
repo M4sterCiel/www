@@ -31,7 +31,7 @@ $statement = db_connect()->prepare($sql);
 $statement->execute($new_user);
 $key = md5(microtime(TRUE)*100000);
 db_update_usr('key', $key, $_POST['username']);
-echo "Successfully registered!";
+echo "<div id=\"register-ok\">An email has been sent with the activation link!<div><br>";
 $_SESSION['user'] = $_POST['username'];
 $_SESSION['logd_on'] = 'ok';
 $_SESSION['email'] = $_POST['email'];
@@ -45,9 +45,9 @@ $message = "Welcome to Camagru,
 
 To activate your account, please follow the link below or copy/paste it in your browser.
 
-localhost:8080/camagru/registration.php?usr=" . urlencode($_POST['username']) . "&key=" . urlencode($key) . "
+http://localhost:8080/camagru/usr/registration.php?usr=" . urlencode($_POST['username']) . "&key=" . urlencode($key) . "
 
 --------------------------------
 This is an automatic mail system, please do not answer this mail.";
-if (mail('raphael.allemand@live.fr', $subject, $message) == false)
+if (mail($_POST['email'], $subject, $message, $header) == false)
     echo "Mail not delivered";

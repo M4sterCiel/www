@@ -11,7 +11,7 @@ function checkForm(event) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("register").innerHTML = this.responseText;
-        if (this.responseText == "Successfully registered!")
+        if (this.responseText == "<div id=\"register-ok\">An email has been sent with the activation link!<div><br>")
             setTimeout(function(){document.location.replace('../index.php');}, 3000);
       }
     };

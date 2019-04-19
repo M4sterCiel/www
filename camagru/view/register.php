@@ -25,7 +25,7 @@
         <input id="reg-answer" type="text" name="private_answer" value="" placeholder="Answer" required><br>
         <input id="reg-ok-notif" type="radio" name="notification" required>Receive notifications <br>
         <input id="reg-no-notif" type="radio" name="notification">Do not receive notifications <br>
-        <button type="submit" name="submit" value="OK" onclick="checkForm(event)">Create my account</button>
+        <input type="submit" name="submit" value="OK" onclick="checkForm(event)">Create my account</button>
     </form>
     <div id="register"></div>
     <script type="text/javascript" src="../js/register.js"></script>
