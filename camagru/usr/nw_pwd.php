@@ -8,6 +8,12 @@ if ($_SESSION['logd_on'] == 'ok')
         echo "Incorrect password... It has to be identical.";
         die();
     }
+    if (!preg_match("^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$
+    ", $_POST['nwpwd']))
+    {
+        echo "Incorrect... Password needs at least a upercase, a lowercase and number character";
+        die();
+    }
     if ($result = db_check('users', '*', 'username', $_SESSION['user']))
     {
         if ($result[0]['password'] == hash('whirlpool', $_POST['nwpwd']))

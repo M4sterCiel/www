@@ -32,9 +32,6 @@ $statement->execute($new_user);
 $key = md5(microtime(TRUE)*100000);
 db_update_usr('key', $key, $_POST['username']);
 echo "<div id=\"register-ok\">An email has been sent with the activation link!<div><br>";
-$_SESSION['user'] = $_POST['username'];
-$_SESSION['logd_on'] = 'ok';
-$_SESSION['email'] = $_POST['email'];
 }
 catch(PDOException $error) {
     echo $sql . "<br>" . $error->getMessage();

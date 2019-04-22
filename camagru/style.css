@@ -31,6 +31,7 @@ nav {
 	width: 100%;
 	height: 60px;;
 	background-color: #424558;
+	margin-bottom: 5%;
 }
 
 nav > ul::after {
@@ -87,3 +88,128 @@ nav li:hover .niveau1 a:hover {
 	color: white;
 	text-align: center;
  }
+
+ .form_login_usr {
+	 border-color: #86899c;
+	 border-style: groove;
+	 background-color: lightgray;
+	 margin: 0 auto;
+	 width: 50vw;
+	 height: 30vw;
+	 border-radius: 15px;
+ }
+
+ .form_login_usr input[type=text] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 5% 5%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+ .form_login_usr input[type=password] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 5% 5%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+
+ .form_login_usr input[type=submit]
+ {
+	background-color: #86899c;
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 5% 5%;
+	font-size: 120%;
+ }
+
+ .form_login_usr label {
+	 font-size: 130%;
+	 margin: 20% 5% 5%;
+ }
+
+ .form_login_usr input[type=button] {
+	background-color: #86899c;
+	width: 30%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 9% 9%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+
+ .form_register_usr {
+	border-color: #86899c;
+	border-style: groove;
+	background-color: lightgray;
+	margin: 0 auto;
+	width: 50vw;
+	height: 42vw;
+	border-radius: 15px;
+ }
+
+ .form_register_usr input[type=text] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 5% 1%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+ .form_register_usr input[type=email] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 5% 1%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+
+ .form_register_usr select {
+	margin: 1.5% 5% 1%;
+	width: 45vw;
+	height: 2vw;
+	border-radius: 10px;
+	font-size: 11px;
+ }
+ .form_register_usr input[type=password] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 1.5% 5% 1%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+ .form_register_usr input[type=radio] {
+	margin-left: 5%;
+ }
+
+ .form_register_usr label {
+	font-size: 130%;
+	margin: 20% 5% 5%;
+}
+
+.form_register_usr input[type=submit]
+ {
+	background-color: #86899c;
+	width: 50%;
+	height: 5%;
+	margin-top: 2%;
+	margin-left: 24%;
+ }
+

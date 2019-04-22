@@ -20,3 +20,5 @@ if (($result = db_check('users', '*', 'username', $_POST['user'])))
     else
         echo "Incorrect username or password!";
 }
+else
+    echo "Incorrect username or password!";
