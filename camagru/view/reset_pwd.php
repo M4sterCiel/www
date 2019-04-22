@@ -17,7 +17,7 @@ if ($result = db_check('users', '*', 'username', $_GET['usr']))
         <br>
         <form method="POST" class="form_nw_pwd">
         <label for="nwpwd">Enter your new password</label>
-            <input id="nwpwd" type="password" name="nwpwd" required><br>
+            <input id="nwpwd" type="password" name="nwpwd" autofocus required><br>
         <label for="nwpwd2">Confirm your password</label>
             <input id="nwpwd2" type="password" name="nwpwd2" value="" required><br>
             <input type="submit" name="submit" value="Create new password" onclick="checkForm(event)">

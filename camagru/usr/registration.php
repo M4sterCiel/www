@@ -16,6 +16,7 @@ if (($result = db_check('users', '*', 'username', $username)))
         $_SESSION['logd_on'] = 'ok';
         $_SESSION['user'] = $result[0]['username'];
         $_SESSION['email'] = $result[0]['email'];
+        header('Refresh: 3; ../index.php');
     }
     else
         echo "An error has occurred, your account can't be activated!";

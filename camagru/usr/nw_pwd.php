@@ -17,6 +17,7 @@ if ($_SESSION['logd_on'] == 'ok')
         }
         else {
             db_update_usr('password', hash('whirlpool', $_POST['nwpwd']), $_SESSION['user']);
+            db_update_usr('key', NULL, $_SESSION['user']);
             echo "Your password has been updated successfully!";
         }
     }

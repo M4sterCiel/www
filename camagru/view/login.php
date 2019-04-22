@@ -20,5 +20,4 @@ include "header.php";
     <div id="log-in"></div>
     </body>
     <script type="text/javascript" src='../js/login.js'></script>
-    <?php require 'footer.php';?>
     </html>
