@@ -8,10 +8,12 @@ if ($_SESSION['logd_on'] == 'ok')
         echo "Incorrect password... It has to be identical.";
         die();
     }
-    if (!preg_match("^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$
-    ", $_POST['nwpwd']))
+    $passwd = $_POST['nwpwd'];
+    $pattern = '/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?=.*[A-Z])(?=.*[a-z]).*$/m';
+
+    if (!preg_match_all($pattern, $passwd))
     {
-        echo "Incorrect... Password needs at least a upercase, a lowercase and number character";
+        echo "Password should respect this pattern (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)!";
         die();
     }
     if ($result = db_check('users', '*', 'username', $_SESSION['user']))

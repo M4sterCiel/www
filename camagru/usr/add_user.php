@@ -6,6 +6,13 @@ if ($_POST['passwd'] != $_POST['passwd2'])
     echo "Wrong password!";
     die();
 }
+$passwd = $_POST['passwd'];
+$pattern = '/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?=.*[A-Z])(?=.*[a-z]).*$/m';
+if (preg_match_all($pattern, $passwd) == false)
+{
+    echo "Password should respect this pattern (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)!";
+    die();
+}
 if (($result = db_check('users', '*', 'email', $_POST['email']) && empty($result)) || ($result = db_check('users', '*', 'username', $_POST['username']) && empty($result)))
 {
     echo "You already have an account";
