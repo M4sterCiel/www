@@ -220,51 +220,45 @@ nav li:hover .niveau1 a:hover {
 	font-weight: bolder;
  }
 
- #sourcevid {
-	 width: 35%;
- }
-.sourcevid {
-	margin: 0 auto;
-}
-
-.form_forgotten_usr {
-	border-color: #86899c;
-	border-style: groove;
-	background-color: lightgray;
-	margin: 0 auto;
-	width: 70%;
-	border-radius: 15px;
- }
-
- .form_forgotten_usr label {
-	font-size: 130%;
-	margin: 15% 5% 5%;
-}
-
-.form_forgotten_usr input[type=submit]
- {
-	background-color: #86899c;
-	width: 30%;
-	height: 25%;
-	border-radius: 16px;
-	margin-top: 2%;
-	margin-left: 35%;
-	margin-bottom: 1%;
-	box-sizing: border-box;
-	padding-top: 1.5%;
-	padding-bottom: 1.5%;
+ 
+ .form_forgotten_usr {
+	 border-color: #86899c;
+	 border-style: groove;
+	 background-color: lightgray;
+	 margin: 0 auto;
+	 width: 70%;
+	 border-radius: 15px;
+	}
+	
+	.form_forgotten_usr label {
+		font-size: 130%;
+		margin: 15% 5% 5%;
+	}
+	
+	.form_forgotten_usr input[type=submit]
+	{
+		background-color: #86899c;
+		width: 30%;
+		height: 25%;
+		border-radius: 16px;
+		margin-top: 2%;
+		margin-left: 35%;
+		margin-bottom: 1%;
+		box-sizing: border-box;
+		padding-top: 1.5%;
+		padding-bottom: 1.5%;
 	font-size: 1.5vw;
 	font-weight: bolder;
- }
+}
 
- .form_forgotten_usr select {
+.form_forgotten_usr select {
 	margin: .5% 5% 1%;
 	width: 90%;
 	height: 6%;
 	border-radius: 10px;
 	font-size: 100%;
- }
- .form_forgotten_usr input[type=password] {
+}
+.form_forgotten_usr input[type=password] {
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
@@ -273,9 +267,9 @@ nav li:hover .niveau1 a:hover {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
- }
+}
 
- .form_forgotten_usr input[type=text] {
+.form_forgotten_usr input[type=text] {
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
@@ -284,9 +278,9 @@ nav li:hover .niveau1 a:hover {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
- }
+}
 
- .form_nw_pwd {
+.form_nw_pwd {
 	border-color: #86899c;
 	border-style: groove;
 	background-color: lightgray;
@@ -295,9 +289,9 @@ nav li:hover .niveau1 a:hover {
 	border-radius: 15px;
 	padding-top: 2%;
 	padding-bottom: 2%;
- }
+}
 
- .form_nw_pwd input[type=password] {
+.form_nw_pwd input[type=password] {
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
@@ -306,15 +300,15 @@ nav li:hover .niveau1 a:hover {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
- }
+}
 
- .form_nw_pwd label {
+.form_nw_pwd label {
 	font-size: 130%;
 	margin: 15% 5% 5%;
 }
 
 .form_nw_pwd input[type=submit]
- {
+{
 	background-color: #86899c;
 	width: 33%;
 	height: 6%;
@@ -327,13 +321,61 @@ nav li:hover .niveau1 a:hover {
 	padding-bottom: 1.5%;
 	font-size: 1.5vw;
 	font-weight: bolder;
+}
+
+.reset-pwd {
+	text-align: center;
+	margin-top: 3%;
+}
+
+#lab-reset-pwd {
+	font-size: 90%;
  }
 
- .reset-pwd {
-	 text-align: center;
-	 margin-top: 3%;
- }
+#sourcevid {
+	width: 120%;
+}
+.sourcevid {
+   margin-left: 15%;
+   width: 35%;
+}
 
- #lab-reset-pwd {
-	 font-size: 90%;
- }
+.gallery-cam-div {
+	float: right;
+	margin-right: 3%;
+	position: relative;
+	overflow: scroll;
+	max-height: 550px;
+	width: 30%;
+	border: #222538;
+	border-style: groove;
+}
+
+.calque-div {
+	margin-left: 15%;
+	margin-bottom: 1%;
+	width: 80%;
+	overflow: auto;
+	white-space: nowrap;
+	border: #222538;
+	border-style: groove;
+	min-height: 6vw;
+	overflow: scroll;
+}
+
+.calque-div img {
+	width: 6%;
+}
+
+#cam-btn {
+	width: 42%;
+	margin-left: 15%;
+	margin-bottom: 6%;
+	background-color: aliceblue;
+	font-size: 120%;
+}
+
+#vid-img {
+	position: absolute;
+	width: 10%;
+}

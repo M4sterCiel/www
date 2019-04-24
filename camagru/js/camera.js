@@ -1,3 +1,5 @@
+tab = new Array;
+
 function init() {
 
     navigator.mediaDevices.getUserMedia({ audio: false, video: { width: 800, height: 600 } }).then(function(mediaStream) {
