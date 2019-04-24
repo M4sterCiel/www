@@ -2,6 +2,8 @@
 <?php 
 session_start();
 include "header.php";
+if ($_SESSION['logd_on'] == 'ok')
+    header('Location: /camagru/index.php');
 ?>
 <!DOCTYPE html>
     <html>

@@ -1,5 +1,10 @@
 <?php
 require "../model.php";
+if ($_POST['user'] == '')
+{
+    echo "✘ Incorrect username!";
+    die();
+}
 if ($result = db_check('users', '*', 'username', $_POST['user']))
 {
     if (trim(strtolower($result[0]['private_answer'])) == trim(strtolower($_POST['answer'])))
@@ -17,12 +22,12 @@ http://localhost:8080/camagru/view/reset_pwd.php?usr=" . urlencode($_POST['user'
 --------------------------------
 This is an automatic mail system, please do not answer this mail.";
         if (mail($result[0]['email'], $subject, $message, $header) == false)
-            echo "Mail not delivered";
+            echo "✘ Mail not delivered";
         else
-            echo "An email has been sent to you with the procedure to re-initialize your password!";
+            echo "✔ An email has been sent to you with the procedure to re-initialize your password!";
     }
     else
     {
-        echo "Incorrect Question/answer...";
+        echo "✘ Incorrect Question/answer...";
     }
 }

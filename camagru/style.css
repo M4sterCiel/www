@@ -152,8 +152,8 @@ nav li:hover .niveau1 a:hover {
 	border-style: groove;
 	background-color: lightgray;
 	margin: 0 auto;
-	width: 50vw;
-	height: 42vw;
+	width: 90%;
+	height: 60%;
 	border-radius: 15px;
  }
 
@@ -161,7 +161,7 @@ nav li:hover .niveau1 a:hover {
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
-	margin: 1.5% 5% 1%;
+	margin: .5% 5% 1%;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -171,7 +171,7 @@ nav li:hover .niveau1 a:hover {
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
-	margin: 1.5% 5% 1%;
+	margin: .5% 5% 1%;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -179,17 +179,17 @@ nav li:hover .niveau1 a:hover {
  }
 
  .form_register_usr select {
-	margin: 1.5% 5% 1%;
-	width: 45vw;
-	height: 2vw;
+	margin: .5% 5% 1%;
+	width: 90%;
+	height: 6%;
 	border-radius: 10px;
-	font-size: 11px;
+	font-size: 100%;
  }
  .form_register_usr input[type=password] {
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
-	margin: 1.5% 5% 1%;
+	margin: .5% 5% 1%;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -201,14 +201,96 @@ nav li:hover .niveau1 a:hover {
 
  .form_register_usr label {
 	font-size: 130%;
-	margin: 20% 5% 5%;
+	margin: 15% 5% 2%;
 }
 
 .form_register_usr input[type=submit]
  {
 	background-color: #86899c;
-	width: 50%;
-	height: 5%;
+	width: 20%;
+	height: 25%;
+	border-radius: 16px;
 	margin-top: 2%;
-	margin-left: 24%;
+	margin-left: 40%;
+	margin-bottom: 1%;
+	box-sizing: border-box;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	font-size: 1.5vw;
+	font-weight: bolder;
+ }
+
+ #sourcevid {
+	 width: 35%;
+ }
+.sourcevid {
+	margin: 0 auto;
+}
+
+.form_forgotten_usr {
+	border-color: #86899c;
+	border-style: groove;
+	background-color: lightgray;
+	margin: 0 auto;
+	width: 70%;
+	border-radius: 15px;
+ }
+
+ .form_forgotten_usr label {
+	font-size: 130%;
+	margin: 15% 5% 5%;
+}
+
+.form_forgotten_usr input[type=submit]
+ {
+	background-color: #86899c;
+	width: 30%;
+	height: 25%;
+	border-radius: 16px;
+	margin-top: 2%;
+	margin-left: 35%;
+	margin-bottom: 1%;
+	box-sizing: border-box;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	font-size: 1.5vw;
+	font-weight: bolder;
+ }
+
+ .form_forgotten_usr select {
+	margin: .5% 5% 1%;
+	width: 90%;
+	height: 6%;
+	border-radius: 10px;
+	font-size: 100%;
+ }
+ .form_forgotten_usr input[type=password] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: .5% 5% 1%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+
+ .form_forgotten_usr input[type=text] {
+	width: 90%;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: .5% 5% 1%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+ }
+
+ .form_nw_pwd {
+	border-color: #86899c;
+	border-style: groove;
+	background-color: lightgray;
+	margin: 0 auto;
+	width: 50%;
+	border-radius: 15px;
  }

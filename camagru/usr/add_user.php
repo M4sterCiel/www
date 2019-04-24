@@ -1,6 +1,16 @@
 <?php
 session_start();
 require "../model.php";
+if ($result = db_check('users', '*', 'username', $_POST['username'])|| $_POST['username'] == '')
+{
+    echo "This username already exists";
+    die();
+}
+if ($result = db_check('users', '*', 'email', $_POST['email']) || $_POST['email'] == '')
+{
+    echo "This email already exists";
+    die();
+}
 if ($_POST['passwd'] != $_POST['passwd2'])
 {
     echo "Wrong password!";
@@ -13,9 +23,9 @@ if (preg_match_all($pattern, $passwd) == false)
     echo "Password should respect this pattern (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)!";
     die();
 }
-if (($result = db_check('users', '*', 'email', $_POST['email']) && empty($result)) || ($result = db_check('users', '*', 'username', $_POST['username']) && empty($result)))
+if ($_POST['answer'] == '')
 {
-    echo "You already have an account";
+    echo "Empty answer";
     die();
 }
 try {

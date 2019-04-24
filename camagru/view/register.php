@@ -23,7 +23,7 @@
         <input id="reg-answer" type="text" name="private_answer" value="" placeholder="Type you answer" required><br>
         <input id="reg-ok-notif" type="radio" name="notification" checked>Receive notifications <br>
         <input id="reg-no-notif" type="radio" name="notification">Do not receive notifications <br>
-        <input type="submit" name="" value="Create my account" onclick="checkForm(event)">
+        <input type="submit" name="" value="Create my account" onclick="checkForm(event)" style="width">
     </form>
     <div id="register"></div>
     </div>

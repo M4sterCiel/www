@@ -1,5 +1,5 @@
 <div>
-<p>Reset your password</p>
+<h1 class="reset-pwd">Reset your password</h1>
 <?php
 session_start();
 require "../model.php";
@@ -12,6 +12,7 @@ if ($result = db_check('users', '*', 'username', $_GET['usr']))
         ?>
         <!DOCTYPE html>
         <html>
+            <head><link rel="stylesheet" href="/camagru/style.css"></head>
         <body>
         <br>
         <br>
@@ -35,14 +36,15 @@ if ($result = db_check('users', '*', 'username', $_GET['usr']))
         ?>
         <!DOCTYPE html>
         <html>
+            <head><link rel="stylesheet" href="/camagru/style.css"></head>
         <body>
         <br>
         <br>
         <form method="POST" class="form_nw_pwd">
-            <label for="nwpwd">Enter your new password</label>
-            <input id="nwpwd" type="password" name="nwpwd" autofocus pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required><br>
-            <label for="nwpwd2">Confirm your password</label>
-            <input id="nwpwd2" type="password" name="nwpwd2" value="" required><br>
+            <label for="nwpwd">Enter your new password</label><br>
+            <input id="nwpwd" type="password" name="nwpwd" autofocus pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Type your password" required><br>
+            <label for="nwpwd2">Confirm your password</label><br>
+            <input id="nwpwd2" type="password" name="nwpwd2" value="" placeholder="Type your password" required><br>
             <input type="submit" name="submit" value="Create new password" onclick="checkForm(event)">
         </form>
         <script type="text/javascript" src="/camagru/js/reset_pwd.js"></script>
