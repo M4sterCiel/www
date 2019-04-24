@@ -3,7 +3,7 @@
 	<script type="text/javascript" src="js/camera.js"></script>
 <body>
     <div>
-        
+
     </div>
     <div class="sourcevid">
         <video id="sourcevid" autoplay="true"  style='display:inline'></video>
