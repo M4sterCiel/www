@@ -1,14 +1,29 @@
 <?php
 session_start();
 require "../model.php";
-if ($result = db_check('users', '*', 'username', $_POST['username'])|| $_POST['username'] == '')
+if (preg_match('/\s/', $_POST['username']))
+{
+    echo "Username must not contain whitespaces";
+    die();
+}
+if ($_POST['username'] == '')
+{
+    echo "Please, enter a correct username";
+    die();
+}
+if ($result = db_check('users', '*', 'username', $_POST['username']))
 {
     echo "This username already exists";
     die();
 }
-if ($result = db_check('users', '*', 'email', $_POST['email']) || $_POST['email'] == '')
+if ($result = db_check('users', '*', 'email', $_POST['email']))
 {
     echo "This email already exists";
+    die();
+}
+if ($_POST['email'] == '')
+{
+    echo "Please, enter a correct e-mail address";
     die();
 }
 if ($_POST['passwd'] != $_POST['passwd2'])
@@ -48,7 +63,7 @@ $statement = db_connect()->prepare($sql);
 $statement->execute($new_user);
 $key = md5(microtime(TRUE)*100000);
 db_update_usr('key', $key, $_POST['username']);
-echo "<div id=\"register-ok\">An email has been sent with the activation link!<div><br>";
+echo "An email has been sent with the activation link!";
 }
 catch(PDOException $error) {
     echo $sql . "<br>" . $error->getMessage();

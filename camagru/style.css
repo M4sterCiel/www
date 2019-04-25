@@ -94,8 +94,8 @@ nav li:hover .niveau1 a:hover {
 	 border-style: groove;
 	 background-color: lightgray;
 	 margin: 0 auto;
-	 width: 50vw;
-	 height: 30vw;
+	 width: 50%;
+	 height: 30%;
 	 border-radius: 15px;
  }
 
@@ -127,7 +127,7 @@ nav li:hover .niveau1 a:hover {
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 1.5% 5% 5%;
-	font-size: 120%;
+	font-size: 100%;
  }
 
  .form_login_usr label {
@@ -135,30 +135,33 @@ nav li:hover .niveau1 a:hover {
 	 margin: 20% 5% 5%;
  }
 
- .form_login_usr input[type=button] {
-	background-color: #86899c;
-	width: 30%;
-	border-radius: 10px;
+ .form_login_usr a {
 	padding: 12px 20px;
 	margin: 1.5% 9% 9%;
 	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
+	font-size: 100%;
  }
 
+ #log-hidden-usr {
+	display: none;
+	margin-left: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: lightgrey;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+}
+
  .form_register_usr {
-	border-color: #86899c;
-	border-style: groove;
-	background-color: lightgray;
 	margin: 0 auto;
 	width: 90%;
 	height: 60%;
-	border-radius: 15px;
  }
 
  .form_register_usr input[type=text] {
 	width: 90%;
+	background-color: lightgrey;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
@@ -169,6 +172,7 @@ nav li:hover .niveau1 a:hover {
  }
  .form_register_usr input[type=email] {
 	width: 90%;
+	background-color: lightgray;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
@@ -180,6 +184,7 @@ nav li:hover .niveau1 a:hover {
 
  .form_register_usr select {
 	margin: .5% 5% 1%;
+	background-color: lightgray;
 	width: 90%;
 	height: 6%;
 	border-radius: 10px;
@@ -194,6 +199,7 @@ nav li:hover .niveau1 a:hover {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
+	background-color: lightgray;
  }
  .form_register_usr input[type=radio] {
 	margin-left: 5%;
@@ -206,7 +212,7 @@ nav li:hover .niveau1 a:hover {
 
 .form_register_usr input[type=submit]
  {
-	background-color: #86899c;
+	background-color: lightgrey;
 	width: 20%;
 	height: 25%;
 	border-radius: 16px;
@@ -217,9 +223,62 @@ nav li:hover .niveau1 a:hover {
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
 	font-size: 1.5vw;
-	font-weight: bolder;
  }
 
+#reg-pattern {
+	font-size: 90%;
+}
+
+#register-div {
+	display: none;
+	margin-left: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+}
+
+#reg-hidden-usr {
+	display: none;
+	margin-left: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: lightgrey;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+}
+#reg-hidden-mail {
+	display: none;
+	margin-left: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: lightgrey;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+}
+#reg-hidden-pwd {
+	display: none;
+	margin-left: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: lightgrey;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+}
+#reg-hidden-answer {
+	display: none;
+	margin-left: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: lightgrey;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+}
  
  .form_forgotten_usr {
 	 border-color: #86899c;
@@ -247,8 +306,8 @@ nav li:hover .niveau1 a:hover {
 		box-sizing: border-box;
 		padding-top: 1.5%;
 		padding-bottom: 1.5%;
-	font-size: 1.5vw;
-	font-weight: bolder;
+		font-size: 1.5vw;
+		font-weight: bolder;
 }
 
 .form_forgotten_usr select {

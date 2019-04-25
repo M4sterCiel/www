@@ -6,14 +6,21 @@ function checkForm(event) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("log-in").innerHTML = this.responseText;
         if (this.responseText == "✓ Access granted!")
         {
           setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
-          document.getElementById("log-in").style = "border-radius: 15px; width: 40%; margin: 0 auto; margin-bottom: 2%; padding: 2%; background-color: lightgreen; text-align: center;";
+          document.getElementById("log-hidden-usr").innerHTML = this.responseText;
+          document.getElementById("log-hidden-usr").style = "display: inherit; color: green;";
         }
         else {
-          document.getElementById("log-in").style = "border-radius: 15px; width: 40%; margin: 0 auto; margin-bottom: 2%; padding: 2%; background-color: pink; text-align: center;";
+          switch (this.responseText) {
+            case "✗ Incorrect username or password!":
+              document.getElementById("log-hidden-usr").innerHTML = this.responseText;
+              document.getElementById("log-hidden-usr").style = "display: inherit;";
+              document.getElementById("user-login").style ="background-color: pink;";
+              document.getElementById("passwd-login").style ="background-color: pink;";
+              setTimeout(function(){document.getElementById("user-login").style ="background-color: white;"; document.getElementById("passwd-login").style ="background-color: white;"; document.getElementById("log-hidden-usr").style = "display: none;"}, 5000);
+          }
         }
       }
     };

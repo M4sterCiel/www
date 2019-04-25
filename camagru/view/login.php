@@ -15,14 +15,15 @@ if ($_SESSION['logd_on'] == 'ok')
     <div class="form_login_usr">
         <form>
             <br>
+            <p id="log-hidden-usr"></p><br>
             <label for="username">Username</label><br>
             <input id="user-login" type="text" name="username" placeholder="Username" autofocus required><br>
             <label for="passwd">Password</label><br>
             <input id="passwd-login" type="password" name="passwd" placeholder="Password" required><br>
             <input type="submit" name="submit" value="Enter" onclick="checkForm(event)">
         </form>
-        <a href="/camagru/view/forgotten_pwd.php"><input type="button" value="Forgot your password"></a>
-        <a href="/camagru/view/register.php"><input type="button" value="Sign up"></a>
+        <a href="/camagru/view/forgotten_pwd.php">Forgot your password</a>
+        <a href="/camagru/view/register.php">Sign up</a>
     </div>
     </body>
     <script type="text/javascript" src='../js/login.js'></script>
