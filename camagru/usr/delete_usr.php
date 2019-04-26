@@ -3,7 +3,7 @@ session_start();
 require "../model.php";
 if ($_POST['passwd'] != $_POST['passwd2'])
 {
-    echo "Incorrect password!";
+    echo "✗	Incorrect password!";
     die();
 }
 $passwd = $_POST['passwd'];
@@ -13,11 +13,11 @@ if ($result = db_check('users', '*', 'email', $_SESSION['email']))
     if ($result[0]['password'] == $passwd)
     {
         db_delete_usr($_SESSION['email']);
-        echo "Your account have been deleted successfully!";
+        echo "✓ Your account have been deleted successfully!";
         header('Refresh: 3; logout.php');
     }
     else
-        echo "Incorrect password!";
+        echo "✗	Incorrect password!";
 }
 else
-    echo "An error has occured!";
+    echo "✗	An error has occured!";

@@ -11,11 +11,13 @@ document.getElementById("reg-submit").onclick = function (event) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) 
       {
-        if(this.responseText == "An email has been sent with the activation link!")
+        if(this.responseText == "✔ An email has been sent with the activation link!")
         {
-          setTimeout(function(){location.replace('/camagru/index.php');}, 4000);
+         setTimeout(function(){location.replace('/camagru/index.php');}, 4000);
           document.getElementById("register-div").innerHTML = this.responseText;
-          document.getElementById("register-div").style = "display: block; color: green;";
+          document.getElementById("register-div").style = "display: block; color: green; font-size: 150%;";
+          var $groupe = document.getElementById('groupe');
+          $groupe.disabled = !$groupe.disabled;
         }
         else 
         {

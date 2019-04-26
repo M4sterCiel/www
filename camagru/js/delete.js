@@ -8,8 +8,16 @@ function checkForm(event) {
         xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("del-div").innerHTML = this.responseText;
-            if (this.responseText == "Your account have been deleted successfully!")
-            setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
+            if (this.responseText == "✓ Your account have been deleted successfully!")
+            {
+                setTimeout(function(){document.location.replace('/camagru/view/logout.php');}, 3000);
+                document.getElementById("del-div").style = "display: inherit; color: green;";
+                var $groupe = document.getElementById('groupe');
+                $groupe.disabled = !$groupe.disabled;
+            }
+            else {
+                document.getElementById("del-div").style = "display: inherit;";
+            }
         }
         };
         xhttp.open("POST", "../usr/delete_usr.php", true);

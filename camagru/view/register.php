@@ -3,10 +3,11 @@
     <html>
     <body>
     <p id="register-div"></p>
-    <form class="form_register_usr">
+    <fieldset id="groupe">   
+        <form id="form_register_usr" class="form_register_usr">
         <br>
         <label id="first-label" for="username">Username</label><br>
-        <input id="username" type="text" name="username" placeholder="Username" autofocus required>
+        <input id="username" type="text" name="username" placeholder="Username   (min 4 chars)" minlength="4" autofocus required>
         <p class="hidden-reg" id="reg-hidden-usr"></p><br>
         <label for="email">Email</label><br>
         <input id="reg-mail" type="email" name="email" placeholder="example@123.com" required>
@@ -30,6 +31,7 @@
         <input id="reg-no-notif" type="radio" name="notification">Do not receive notifications <br>
         <input id="reg-submit" type="submit" name="" value="Create my account" style="width">
     </form>
+    </fieldset>
     <script type="text/javascript" src="../js/register.js"></script>
     </body>
     </html>

@@ -6,7 +6,7 @@ if (preg_match('/\s/', $_POST['username']))
     echo "Username must not contain whitespaces";
     die();
 }
-if ($_POST['username'] == '')
+if ($_POST['username'] == '' || strlen($_POST['username']) < 4)
 {
     echo "Please, enter a correct username";
     die();
@@ -21,7 +21,7 @@ if ($result = db_check('users', '*', 'email', $_POST['email']))
     echo "This email already exists";
     die();
 }
-if ($_POST['email'] == '')
+if ($_POST['email'] == '' || strstr($_POST['email'], '@') == false)
 {
     echo "Please, enter a correct e-mail address";
     die();
@@ -63,7 +63,7 @@ $statement = db_connect()->prepare($sql);
 $statement->execute($new_user);
 $key = md5(microtime(TRUE)*100000);
 db_update_usr('key', $key, $_POST['username']);
-echo "An email has been sent with the activation link!";
+echo "✔ An email has been sent with the activation link!";
 }
 catch(PDOException $error) {
     echo $sql . "<br>" . $error->getMessage();

@@ -10,7 +10,9 @@ function checkForm(event) {
         {
           setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
           document.getElementById("log-hidden-usr").innerHTML = this.responseText;
-          document.getElementById("log-hidden-usr").style = "display: inherit; color: green;";
+          document.getElementById("log-hidden-usr").style = "display: inherit; color: green; background-color: white; font-size: 150%;";
+          var $groupe = document.getElementById('groupe');
+          $groupe.disabled = !$groupe.disabled;
         }
         else {
           switch (this.responseText) {
@@ -19,7 +21,13 @@ function checkForm(event) {
               document.getElementById("log-hidden-usr").style = "display: inherit;";
               document.getElementById("user-login").style ="background-color: pink;";
               document.getElementById("passwd-login").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("user-login").style ="background-color: white;"; document.getElementById("passwd-login").style ="background-color: white;"; document.getElementById("log-hidden-usr").style = "display: none;"}, 5000);
+              setTimeout(function(){document.getElementById("user-login").style ="background-color: lightgrey;"; document.getElementById("passwd-login").style ="background-color: lightgrey;"; document.getElementById("log-hidden-usr").style = "display: none;"}, 5000);
+              break;
+            case "✗ Your account is not active yet, please review your mails and follow the link to activate it.":
+              document.getElementById("log-hidden-usr").innerHTML = this.responseText;
+              document.getElementById("log-hidden-usr").style = "display: inherit;";
+              break;
+
           }
         }
       }

@@ -90,13 +90,9 @@ nav li:hover .niveau1 a:hover {
  }
 
  .form_login_usr {
-	 border-color: #86899c;
-	 border-style: groove;
-	 background-color: lightgray;
 	 margin: 0 auto;
 	 width: 50%;
 	 height: 30%;
-	 border-radius: 15px;
  }
 
  .form_login_usr input[type=text] {
@@ -105,7 +101,9 @@ nav li:hover .niveau1 a:hover {
 	padding: 12px 20px;
 	margin: 1.5% 5% 5%;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border-left-style: solid;
+	background-color: lightgrey;
+	border-left-width: 5px;
 	border-radius: 4px;
 	box-sizing: border-box;
  }
@@ -115,14 +113,16 @@ nav li:hover .niveau1 a:hover {
 	padding: 12px 20px;
 	margin: 1.5% 5% 5%;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border-left-style: solid;
+	border-left-width: 5px;
 	border-radius: 4px;
+	background-color: lightgrey;
 	box-sizing: border-box;
  }
 
  .form_login_usr input[type=submit]
  {
-	background-color: #86899c;
+	background-color:lightgrey;
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
@@ -136,7 +136,7 @@ nav li:hover .niveau1 a:hover {
  }
 
  .form_login_usr a {
-	padding: 12px 20px;
+	padding: 1% 7%;
 	margin: 1.5% 9% 9%;
 	display: inline-block;
 	font-size: 100%;
@@ -147,10 +147,11 @@ nav li:hover .niveau1 a:hover {
 	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: lightgrey;
+	background-color: white;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
+	font-size: 150%;
 }
 
  .form_register_usr {
@@ -166,9 +167,10 @@ nav li:hover .niveau1 a:hover {
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
 	display: inline-block;
-	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
+	border-left-style: solid;
+	border-left-width: 5px;
  }
  .form_register_usr input[type=email] {
 	width: 90%;
@@ -177,9 +179,10 @@ nav li:hover .niveau1 a:hover {
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
 	display: inline-block;
-	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
+	border-left-style: solid;
+	border-left-width: 5px;
  }
 
  .form_register_usr select {
@@ -196,10 +199,11 @@ nav li:hover .niveau1 a:hover {
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
 	display: inline-block;
-	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
 	background-color: lightgray;
+	border-left-style: solid;
+	border-left-width: 5px;
  }
  .form_register_usr input[type=radio] {
 	margin-left: 5%;
@@ -231,12 +235,13 @@ nav li:hover .niveau1 a:hover {
 
 #register-div {
 	display: none;
-	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
+	font-size: 150%;
+	text-align: center;
 }
 
 #reg-hidden-usr {
@@ -244,7 +249,6 @@ nav li:hover .niveau1 a:hover {
 	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: lightgrey;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
@@ -254,7 +258,6 @@ nav li:hover .niveau1 a:hover {
 	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: lightgrey;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
@@ -264,7 +267,6 @@ nav li:hover .niveau1 a:hover {
 	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: lightgrey;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
@@ -274,91 +276,89 @@ nav li:hover .niveau1 a:hover {
 	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: lightgrey;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
 }
  
- .form_forgotten_usr {
-	 border-color: #86899c;
-	 border-style: groove;
-	 background-color: lightgray;
+.form_forgotten_usr {
 	 margin: 0 auto;
 	 width: 70%;
-	 border-radius: 15px;
-	}
+}
 	
-	.form_forgotten_usr label {
-		font-size: 130%;
-		margin: 15% 5% 5%;
-	}
+.form_forgotten_usr label {
+	font-size: 130%;
+	margin: 15% 5% 5%;
+}
 	
-	.form_forgotten_usr input[type=submit]
-	{
-		background-color: #86899c;
-		width: 30%;
-		height: 25%;
-		border-radius: 16px;
-		margin-top: 2%;
-		margin-left: 35%;
-		margin-bottom: 1%;
-		box-sizing: border-box;
-		padding-top: 1.5%;
-		padding-bottom: 1.5%;
-		font-size: 1.5vw;
-		font-weight: bolder;
+.form_forgotten_usr input[type=submit]
+{
+	background-color: lightgrey;
+	width: 30%;
+	height: 25%;
+	border-radius: 16px;
+	margin-top: 2%;
+	margin-left: 35%;
+	margin-bottom: 1%;
+	box-sizing: border-box;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	font-size: 1.5vw;
 }
 
 .form_forgotten_usr select {
 	margin: .5% 5% 1%;
-	width: 90%;
+	width: 94%;
 	height: 6%;
 	border-radius: 10px;
 	font-size: 100%;
 }
 .form_forgotten_usr input[type=password] {
 	width: 90%;
-	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
 	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
+	border-left-style: solid;
+	border-left-width: 5px;
+	background-color: lightgrey;
 }
 
 .form_forgotten_usr input[type=text] {
 	width: 90%;
-	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
 	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
+	border-left-style: solid;
+	border-left-width: 5px;
+	background-color: lightgrey;
+}
+
+#forgotten-div {
+	display: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+	font-size: 150%;
+	text-align: center;
 }
 
 .form_nw_pwd {
-	border-color: #86899c;
-	border-style: groove;
-	background-color: lightgray;
 	margin: 0 auto;
 	width: 50%;
-	border-radius: 15px;
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
 
 .form_nw_pwd input[type=password] {
 	width: 90%;
-	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
 	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
+	border-left-style: solid;
+	border-left-width: 5px;
+	background-color: lightgrey;
 }
 
 .form_nw_pwd label {
@@ -368,10 +368,9 @@ nav li:hover .niveau1 a:hover {
 
 .form_nw_pwd input[type=submit]
 {
-	background-color: #86899c;
+	background-color: lightgrey;
 	width: 33%;
 	height: 6%;
-	border-radius: 16px;
 	margin-top: 2%;
 	margin-left: 32%;
 	margin-bottom: 1%;
@@ -379,7 +378,17 @@ nav li:hover .niveau1 a:hover {
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
 	font-size: 1.5vw;
-	font-weight: bolder;
+}
+
+#reset-div {
+	display: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+	font-size: 150%;
+	text-align: center;
 }
 
 .reset-pwd {
@@ -437,4 +446,55 @@ nav li:hover .niveau1 a:hover {
 #vid-img {
 	position: absolute;
 	width: 10%;
+}
+
+#groupe {
+	border: none;
+}
+
+#del-div {
+	display: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: red;
+	width: 90%;
+	border-radius: 3px;
+	font-size: 150%;
+	text-align: center;
+}
+
+.form_delete_usr {
+	margin: 0 auto;
+	width: 50%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.form_delete_usr input[type=password] {
+	width: 90%;
+	padding: 12px 20px;
+	margin: .5% 5% 1%;
+	display: inline-block;
+	border-left-style: solid;
+	border-left-width: 5px;
+	background-color: lightgrey;
+}
+
+.form_delete_usr label {
+	font-size: 130%;
+	margin: 15% 5% 5%;
+}
+
+.form_delete_usr input[type=submit]
+{
+	background-color: lightgrey;
+	width: 33%;
+	height: 6%;
+	margin-top: 2%;
+	margin-left: 32%;
+	margin-bottom: 1%;
+	box-sizing: border-box;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	font-size: 1.5vw;
 }

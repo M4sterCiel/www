@@ -7,6 +7,11 @@ if ($_POST['user'] == '')
 }
 if ($result = db_check('users', '*', 'username', $_POST['user']))
 {
+    if ($_POST['question'] != $result[0]['private_question'])
+    {
+        echo "✘ Incorrect Question/answer...";
+        die();
+    }
     if (trim(strtolower($result[0]['private_answer'])) == trim(strtolower($_POST['answer'])))
     {
         $key = md5(microtime(TRUE)*100000);

@@ -8,10 +8,15 @@ function checkForm(event) {
         document.getElementById("reset-div").innerHTML = this.responseText;
         if (this.responseText == "✔ Your password has been updated successfully!") {
           setTimeout(function(){document.location.replace('/camagru/index.php');}, 3000);
-          document.getElementById("reset-div").style = "border-radius: 15px; width: 40%; margin: 0 auto; margin-bottom: 2%; padding: 2%; background-color: lightgreen; text-align: center;";
+          document.getElementById("reset-div").style = "display: inherit; color: green;";
+          var $groupe = document.getElementById('groupe');
+          $groupe.disabled = !$groupe.disabled;
         }
         else {
-          document.getElementById("reset-div").style = "border-radius: 15px; width: 40%; margin: 0 auto; margin-bottom: 2%; padding: 2%; background-color: pink; text-align: center;";
+          document.getElementById("reset-div").style = "display: inherit;";
+          setTimeout(() => {
+            document.getElementById("reset-div").style = "display: none;";
+          }, 5000);
         }
       }
     };

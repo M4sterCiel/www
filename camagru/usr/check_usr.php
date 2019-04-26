@@ -15,7 +15,7 @@ if (($result = db_check('users', '*', 'username', $_POST['user'])))
     }
     else if ($result[0]['password'] == $passwd && $result[0]['active'] == 0)
     {
-        echo "Your account is not active yet, please review your mails and follow the link to activate it.";
+        echo "✗ Your account is not active yet, please review your mails and follow the link to activate it.";
     }
     else
         echo "✗ Incorrect username or password!";
