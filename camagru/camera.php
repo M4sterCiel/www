@@ -51,6 +51,10 @@ if (!$_SESSION['logd_on'])
     </div>
     <br>
 <button id="cam-btn" onclick='clone()'>Take a pic!</button>
+<form action="/action_page.php">
+  Select a file: <input type="file" name="myFile" value="Browse..."><br><br>
+  <input type="submit">
+</form>
 <textarea id='tar' style='width:50%;height:200px;'></textarea>
 </body>
  

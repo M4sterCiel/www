@@ -9,6 +9,9 @@ function init() {
         
         video.onloadedmetadata = function(e) {
             video.play();
+            setTimeout(() => {
+                video.ended;
+            }, 5000);
         };
       
     }).catch(function(err) { console.log(err.name + ": " + err.message); });
