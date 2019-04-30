@@ -27,4 +27,29 @@ function clone(){
     document.getElementById('tar').value=base64;
 }
 
+function layer(img) {
+    var calque = document.getElementsByClassName('layer-img');
+    for(var i=0; i<calque.length; i++){
+        calque[i].style = "border: none;";}
+    img.style = "border: 2px solid blue;"
+    var layer = document.createElement('img');
+    layer.src = img.src;
+    layer.alt =  img.alt;
+    layer.style = "position: absolute;"
+    layer.id = "vid-img";
+    if (document.getElementById("vid-img") == null)
+    {
+        document.getElementById("source-cam-div").prepend(layer);
+    }
+    else
+    {
+        var video = document.getElementById("source-cam-div");
+        var div = document.getElementById("vid-img");
+        video.replaceChild(layer, div);
+    }
+    var btn = document.getElementById("cam-btn");
+    btn.removeAttribute("disabled");
+    btn.setAttribute("onclick", "clone()");
+}
+
 window.onload = init;

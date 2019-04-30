@@ -425,9 +425,9 @@ nav li:hover .niveau1 a:hover {
 	width: 80%;
 	overflow: auto;
 	white-space: nowrap;
-	border: #222538;
+/* 	border: #222538;
 	border-style: groove;
-	min-height: 6vw;
+ */	height: 15%;
 	overflow: scroll;
 }
 
@@ -498,3 +498,4 @@ nav li:hover .niveau1 a:hover {
 	padding-bottom: 1.5%;
 	font-size: 1.5vw;
 }
+

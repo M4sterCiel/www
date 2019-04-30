@@ -5,9 +5,10 @@ if (!$_SESSION['logd_on'])
 ?>
 	<script type="text/javascript" src="js/camera.js"></script>
 <body>
-    <div class="calque-div">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
+    <div id="calque" class="calque-div">
+        <a href="#"><img class="layer-img" src="/camagru/img/pitcher.png" alt="pitcher" onclick="layer(this)"></a>
+        <a href="#"><img class="layer-img" src="/camagru/img/flowers.png" alt="flowers" onclick="layer(this)"></a>
+        <a href="#"><img class="layer-img" src="/camagru/img/linux.png" alt="linux" onclick="layer(this)"></a>
         <img src="/camagru/img/pitcher.png" alt="pitcher">
         <img src="/camagru/img/flowers.png" alt="flowers">
         <img src="/camagru/img/pitcher.png" alt="pitcher">
@@ -44,13 +45,12 @@ if (!$_SESSION['logd_on'])
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
         </div>
-        <div class="sourcevid">
-            <img id="vid-img" src="/camagru/img/pitcher.png" alt="pitcher">
+        <div id="source-cam-div" class="sourcevid">
             <video id="sourcevid" autoplay="true"  style='display:inline'></video>
         </div>
     </div>
     <br>
-<button id="cam-btn" onclick='clone()'>Take a pic!</button>
+<button id="cam-btn" disabled>Take a pic!</button>
 <form action="/action_page.php">
   Select a file: <input type="file" name="myFile" value="Browse..."><br><br>
   <input type="submit">
