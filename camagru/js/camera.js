@@ -1,4 +1,4 @@
-tab = new Array;
+layer_img = '';
 
 function init() {
 
@@ -22,9 +22,22 @@ function clone(){
     var vivi = document.getElementById('sourcevid');
     var canvas1 = document.getElementById('cvs').getContext('2d');
     canvas1.drawImage(vivi, 0,0, 150, 112);
-    var base64=document.getElementById('cvs').toDataURL("image/png");	//l'image au format base 64
-    document.getElementById('tar').value='';
-    document.getElementById('tar').value=base64;
+    var base64 = document.getElementById('cvs').toDataURL("image/png");	//l'image au format base 64
+    document.getElementById('tar').value = '';
+    document.getElementById('tar').value = base64;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) 
+      {
+        console.log(this.responseText);
+        var img = document.createElement("img");
+        img.src = "/camagru/usr/newfile.png";
+        document.getElementById("gallery-cam").appendChild(img);
+      }
+    };
+    xhttp.open("POST", "/camagru/usr/image.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("image=" + base64 + "&layer=" + layer_img);
 }
 
 function layer(img) {
@@ -35,6 +48,7 @@ function layer(img) {
     var layer = document.createElement('img');
     layer.src = img.src;
     layer.alt =  img.alt;
+    layer_img = img.src;
     layer.style = "position: absolute;"
     layer.id = "vid-img";
     if (document.getElementById("vid-img") == null)

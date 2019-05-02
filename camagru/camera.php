@@ -33,17 +33,6 @@ if (!$_SESSION['logd_on'])
             <div id="main" style='height:150px;width:150px;margin:auto;display:inline'>
             <canvas id="cvs" height='150' width='150'></canvas>
             </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum corporis magnam qui assumenda similique repudiandae deserunt quos veniam et! Magnam vitae pariatur voluptatibus sunt accusamus. Corporis asperiores sapiente cupiditate quas.</p>
         </div>
         <div id="source-cam-div" class="sourcevid">
             <video id="sourcevid" autoplay="true"  style='display:inline'></video>
