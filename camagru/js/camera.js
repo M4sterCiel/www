@@ -51,7 +51,7 @@ function layer(img) {
     img.style = "border: 2px solid blue;"
     var layer = document.createElement('img');
     layer.src = img.src;
-    layer.alt =  img.alt;
+    layer.alt = img.alt;
     layer_img = img.src;
     layer_img = layer_img.split("img/")[1];
     layer.style = "position: absolute;"
