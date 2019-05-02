@@ -13,7 +13,7 @@ if (!$_SESSION['logd_on'])
     <div class="cam-div">
         <div id="gallery-cam" class="gallery-cam-div">
             <div id="main" style='height:150px;width:150px;margin:auto;display:inline'>
-            <canvas id="cvs" width="1280" height="720"></canvas>
+            <canvas id="cvs" width="800" height="600"></canvas>
             </div>
         </div>
         <div id="source-cam-div" class="sourcevid">

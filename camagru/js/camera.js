@@ -23,7 +23,7 @@ function init() {
 function clone(){
     var vivi = document.getElementById('sourcevid');
     var canvas1 = document.getElementById('cvs').getContext('2d');
-    canvas1.drawImage(vivi, 0,0, 1080, 720);
+    canvas1.drawImage(vivi, 0,0, 800, 600);
     var base64 = document.getElementById('cvs').toDataURL("image/png");	//l'image au format base 64
     document.getElementById('tar').value = '';
     document.getElementById('tar').value = base64;
