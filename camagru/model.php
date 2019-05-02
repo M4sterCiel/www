@@ -49,11 +49,11 @@ function db_update_usr($field, $var, $user) {
     }
 }
 
-function db_insert_picture($user_id, $base64) {
+function db_insert_picture($user_id, $path) {
     try {
-        $sql = "INSERT INTO gallery (user_id, pic_link) VALUES (`$user_id`, `$base64`)";
+        $sql = "INSERT INTO `gallery` (`id`, `user_id`, `pic_link`, `nb_like`, `date`) VALUES (NULL, '$user_id', '$path', NULL, CURRENT_TIMESTAMP)";
         $stmt = db_connect()->prepare($sql);
-        $stmt->exec();
+        $stmt->execute();
     } catch (PDOException $e) {
         echo 'Connexion échouée : ' . $e->getMessage();
     }
