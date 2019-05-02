@@ -414,6 +414,7 @@ nav li:hover .niveau1 a:hover {
 	position: relative;
 	overflow: scroll;
 	max-height: 550px;
+	min-height: 550px;
 	width: 30%;
 	border: #222538;
 	border-style: groove;
@@ -446,6 +447,10 @@ nav li:hover .niveau1 a:hover {
 #vid-img {
 	position: absolute;
 	width: 10%;
+}
+
+#cvs {
+	display: none;
 }
 
 #groupe {

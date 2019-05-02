@@ -1,4 +1,6 @@
-layer_img = '';
+
+var layer_img = '';
+var imageCapture;
 
 function init() {
 
@@ -6,7 +8,7 @@ function init() {
         
         var video = document.getElementById('sourcevid');
         video.srcObject = mediaStream;
-        
+
         video.onloadedmetadata = function(e) {
             video.play();
             setTimeout(() => {
@@ -21,7 +23,7 @@ function init() {
 function clone(){
     var vivi = document.getElementById('sourcevid');
     var canvas1 = document.getElementById('cvs').getContext('2d');
-    canvas1.drawImage(vivi, 0,0, 150, 112);
+    canvas1.drawImage(vivi, 0,0, 1080, 720);
     var base64 = document.getElementById('cvs').toDataURL("image/png");	//l'image au format base 64
     document.getElementById('tar').value = '';
     document.getElementById('tar').value = base64;
@@ -30,8 +32,10 @@ function clone(){
       if (this.readyState == 4 && this.status == 200) 
       {
         console.log(this.responseText);
+        var src = this.responseText.split("../");
         var img = document.createElement("img");
-        img.src = "/camagru/usr/newfile.png";
+        img.src = src[1];
+        img.style = "width:90%;";
         document.getElementById("gallery-cam").appendChild(img);
       }
     };
@@ -49,6 +53,7 @@ function layer(img) {
     layer.src = img.src;
     layer.alt =  img.alt;
     layer_img = img.src;
+    layer_img = layer_img.split("img/")[1];
     layer.style = "position: absolute;"
     layer.id = "vid-img";
     if (document.getElementById("vid-img") == null)

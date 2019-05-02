@@ -9,29 +9,11 @@ if (!$_SESSION['logd_on'])
         <a href="#"><img class="layer-img" src="/camagru/img/pitcher.png" alt="pitcher" onclick="layer(this)"></a>
         <a href="#"><img class="layer-img" src="/camagru/img/flowers.png" alt="flowers" onclick="layer(this)"></a>
         <a href="#"><img class="layer-img" src="/camagru/img/linux.png" alt="linux" onclick="layer(this)"></a>
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
-        <img src="/camagru/img/pitcher.png" alt="pitcher">
-        <img src="/camagru/img/flowers.png" alt="flowers">
     </div>
     <div class="cam-div">
         <div id="gallery-cam" class="gallery-cam-div">
             <div id="main" style='height:150px;width:150px;margin:auto;display:inline'>
-            <canvas id="cvs" height='150' width='150'></canvas>
+            <canvas id="cvs" width="1280" height="720"></canvas>
             </div>
         </div>
         <div id="source-cam-div" class="sourcevid">
