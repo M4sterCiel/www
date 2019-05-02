@@ -17,21 +17,10 @@ file_put_contents($file, $image_en_base64);
 
 
 $img_src = imagecreatefrompng($file);
-$size_layer = getimagesize($path_layer);
-$size_img = getimagesize($file);
 
-imagecopy($img_src, $layer, 0, 0, 0, 0, $size_layer[0], $size_layer[1]);
-/* imagecopyresampled($img_src, $layer, 0, 0, 0, 0, $size_img[0], $size_img[1], $size_layer[0], $size_layer[1]); */
+imagecopy($img_src, $layer, imagesx($img_src) - imagesx($layer), imagesy($img_src) - imagesy($layer), 0, 0, imagesx($layer), imagesy($layer));
 imagepng($img_src, $file);
+imagedestroy($img_src);
+imagedestroy($layer);
 
-
-/* $path = "../pictures/";
-
-$image_parts = explode(";base64,", $img);
-$image_type_aux = explode("image/", $image_parts[0]);
-$image_type = $image_type_aux[1];
-$image_en_base64 = base64_decode($image_parts[1]);
-$file = $path . uniqid() . ".png";
-
-file_put_contents($file, $image_en_base64); */
 echo $file;
