@@ -7,25 +7,25 @@ if (!$_SESSION['logd_on'])
 <body>
     <div id="calque" class="calque-div">
         <a href="#"><img class="layer-img" src="/camagru/img/pitcher.png" alt="pitcher" onclick="layer(this)"></a>
-        <a href="#"><img class="layer-img" src="/camagru/img/flowers.png" alt="flowers" onclick="layer(this)"></a>
         <a href="#"><img class="layer-img" src="/camagru/img/linux.png" alt="linux" onclick="layer(this)"></a>
+        <a href="#"><img class="layer-img" src="/camagru/img/android.png" alt="android" onclick="layer(this)"></a>
+        <a href="#"><img class="layer-img" src="/camagru/img/apple.png" alt="apple" onclick="layer(this)"></a>
+        <a href="#"><img class="layer-img" src="/camagru/img/windows.png" alt="windows" onclick="layer(this)"></a>
     </div>
     <div class="cam-div">
         <div id="gallery-cam" class="gallery-cam-div">
-            <div id="main" style='height:150px;width:150px;margin:auto;display:inline'>
             <canvas id="cvs" width="800" height="600"></canvas>
             </div>
         </div>
-        <div id="source-cam-div" class="sourcevid">
+        <div id="source-cam-div" class="sourcevid" name="selected">
             <video id="sourcevid" autoplay="true"  style='display:inline'></video>
         </div>
     </div>
     <br>
 <button id="cam-btn" disabled>Take a pic!</button>
-<form action="/action_page.php">
-  Select a file: <input type="file" name="myFile" value="Browse..."><br><br>
-  <input type="submit">
+<form>
+  Select a file: <input type="file" name="myFile" value="" accept="image/png, image/jpeg"><br><br>
+  <input type="submit" onclick="upload(event)">
 </form>
-<textarea id='tar' style='width:50%;height:200px;'></textarea>
 </body>
  

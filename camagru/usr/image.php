@@ -4,6 +4,7 @@ session_start();
 
 $path_layer = "../img/" . $_POST['layer'];
 $layer = imagecreatefrompng($path_layer);
+$layer = imagescale($layer, 195);
 
 
 $img = $_POST['image'];
@@ -18,14 +19,10 @@ file_put_contents($file, $image_en_base64);
 
 $img_src = imagecreatefrompng($file);
 
-imagecopy($img_src, $layer, 0, imagesy($img_src) - imagesy($layer), 0, 0, imagesx($layer), imagesy($layer));
+imagecopy($img_src, $layer, 0, 0, 0, 0, imagesx($layer), imagesy($layer));
 imagepng($img_src, $file);
 
 imagedestroy($img_src);
 imagedestroy($layer);
-
-$path_img = explode("/", $file);
-db_insert_picture($_SESSION['user'], $path_img[2]);
-
 
 echo $file;

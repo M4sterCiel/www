@@ -434,6 +434,13 @@ nav li:hover .niveau1 a:hover {
 
 .calque-div img {
 	width: 6%;
+	margin-left: 3%;
+}
+
+.gallery-cam-div img {
+	margin-left: 5%;
+	margin-top: 5%;
+	width: 90%;
 }
 
 #cam-btn {

@@ -17,7 +17,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
 
   CREATE TABLE gallery (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(11) NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
     pic_link MEDIUMTEXT NOT NULL,
     nb_like iNT(11),
     date TIMESTAMP
