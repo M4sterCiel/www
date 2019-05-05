@@ -24,8 +24,8 @@ if (!$_SESSION['logd_on'])
     <br>
 <button id="cam-btn" disabled>Take a pic!</button>
 <form>
-  Select a file: <input type="file" name="myFile" value="" accept="image/png, image/jpeg"><br><br>
-  <input type="submit" onclick="upload(event)">
+    <input onchange="upload(this.files)" id="file" type="file" name="myFile" value="" accept="image/png, image/jpeg" style="margin-bottom: 3%;">
 </form>
+<br><br>
 </body>
  

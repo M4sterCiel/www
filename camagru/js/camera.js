@@ -3,6 +3,8 @@ var layer_img = '';
 var imageCapture;
 var selected = 0;
 
+
+
 function init() {
 
     navigator.mediaDevices.getUserMedia({ audio: false, video: { width: 800, height: 600 } }).then(function(mediaStream) {
@@ -139,8 +141,57 @@ function disable_btn(){
     btn.setAttribute("disabled", "");
 }
 
-function upload(event){
-    event.preventDefault();
-    console.log("plop");
+function upload(files){
+    createThumbnail(files[0]);
+
+    /* var btn1 = document.createElement("button");
+    btn1.textContent = "Save";
+    btn1.id = "btn1";
+    btn1.setAttribute("onclick", "save(this)");
+    btn1.style = "margin-left: 15%; width: 30%;";
+    var btn2 = document.createElement("button");
+    btn2.textContent = "Delete";
+    btn2.id = "btn2";
+    btn2.setAttribute("onclick", "del(this)");
+    btn2.style = "margin-left: 20%; width: 35%;";
+    document.getElementById("source-cam-div").appendChild(btn1);
+    document.getElementById("source-cam-div").appendChild(btn2);
+    document.getElementById("sourcevid").style = "display: none;"; */
+
+    /* var img = document.createElement("img");
+    img.src = files.name;
+    console.log(img.src);
+    document.getElementById("source-cam-div").appendChild(img);
+    var btn1 = document.createElement("button");
+    btn1.textContent = "Save";
+    var reader = new FileReader();
+    reader.readAsDataURL(files[0].toDataURL);
+    btn1.id = "btn1";
+    btn1.setAttribute("onclick", "save(this)");
+    btn1.style = "margin-left: 15%; width: 30%;";
+    var btn2 = document.createElement("button");
+    btn2.textContent = "Delete";
+    btn2.id = "btn2";
+    btn2.setAttribute("onclick", "del(this)");
+    btn2.style = "margin-left: 20%; width: 35%;";
+    document.getElementById("source-cam-div").appendChild(btn1);
+    document.getElementById("source-cam-div").appendChild(btn2);
+    document.getElementById("sourcevid").style = "display: none;";
+    document.getElementById("vid-img").remove();
+    disable_btn(); */
+}
+
+
+function createThumbnail(files){
+    var reader = new FileReader();
+    reader.addEventListener('load', function() {
+    
+        var imgElement = document.createElement('img');
+        imgElement.style.width = '120%';
+        imgElement.src = this.result;
+        document.getElementById("source-cam-div").appendChild(imgElement);
+    });
+    reader.readAsDataURL(files);
+    document.getElementById("sourcevid").style = "display: none;";
 }
 window.onload = init;
