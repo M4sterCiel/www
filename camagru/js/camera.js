@@ -154,8 +154,10 @@ function upload(files){
     createThumbnail(files[0]);
     if (document.getElementById("sourcevid").style == "display: none;")
         document.getElementById("sourcevid").remove();
-    else
+    else if (document.getElementById("no-image"))
         document.getElementById("no-image").remove();
+    else
+        document.getElementById("sourcevid").style = "display: none;";
     createButton();
 }
 
