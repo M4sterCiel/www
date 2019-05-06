@@ -19,7 +19,16 @@ function init() {
             }, 5000);
         };
       
-    }).catch(function(err) { console.log(err.name + ": " + err.message); });
+    }).catch(function(err) { 
+        console.log(err.name + ": " + err.message);
+        let img = document.createElement("img");
+        img.src = "/camagru/img/no-image.png";
+        img.style.width = "120%";
+        img.id = "no-image";
+        document.getElementById("source-cam-div").appendChild(img);
+        document.getElementById("sourcevid").style = "display: none;";
+        selected = 1;
+     });
 
 }
 
@@ -143,44 +152,12 @@ function disable_btn(){
 
 function upload(files){
     createThumbnail(files[0]);
-
-    /* var btn1 = document.createElement("button");
-    btn1.textContent = "Save";
-    btn1.id = "btn1";
-    btn1.setAttribute("onclick", "save(this)");
-    btn1.style = "margin-left: 15%; width: 30%;";
-    var btn2 = document.createElement("button");
-    btn2.textContent = "Delete";
-    btn2.id = "btn2";
-    btn2.setAttribute("onclick", "del(this)");
-    btn2.style = "margin-left: 20%; width: 35%;";
-    document.getElementById("source-cam-div").appendChild(btn1);
-    document.getElementById("source-cam-div").appendChild(btn2);
-    document.getElementById("sourcevid").style = "display: none;"; */
-
-    /* var img = document.createElement("img");
-    img.src = files.name;
-    console.log(img.src);
-    document.getElementById("source-cam-div").appendChild(img);
-    var btn1 = document.createElement("button");
-    btn1.textContent = "Save";
-    var reader = new FileReader();
-    reader.readAsDataURL(files[0].toDataURL);
-    btn1.id = "btn1";
-    btn1.setAttribute("onclick", "save(this)");
-    btn1.style = "margin-left: 15%; width: 30%;";
-    var btn2 = document.createElement("button");
-    btn2.textContent = "Delete";
-    btn2.id = "btn2";
-    btn2.setAttribute("onclick", "del(this)");
-    btn2.style = "margin-left: 20%; width: 35%;";
-    document.getElementById("source-cam-div").appendChild(btn1);
-    document.getElementById("source-cam-div").appendChild(btn2);
-    document.getElementById("sourcevid").style = "display: none;";
-    document.getElementById("vid-img").remove();
-    disable_btn(); */
+    if (document.getElementById("sourcevid").style == "display: none;")
+        document.getElementById("sourcevid").remove();
+    else
+        document.getElementById("no-image").remove();
+    createButton();
 }
-
 
 function createThumbnail(files){
     var reader = new FileReader();
@@ -190,8 +167,23 @@ function createThumbnail(files){
         imgElement.style.width = '120%';
         imgElement.src = this.result;
         document.getElementById("source-cam-div").appendChild(imgElement);
+        selected = 0;
     });
     reader.readAsDataURL(files);
-    document.getElementById("sourcevid").style = "display: none;";
+}
+
+function createButton(){
+    var btn1 = document.createElement("button");
+    btn1.textContent = "Save";
+    btn1.id = "btn1";
+    btn1.setAttribute("onclick", "save(this)");
+    btn1.style = "margin-left: 15%; width: 30%;";
+    var btn2 = document.createElement("button");
+    btn2.textContent = "Delete";
+    btn2.id = "btn2";
+    btn2.setAttribute("onclick", "del(this)");
+    btn2.style = "margin-left: 20%; width: 35%;";
+    document.getElementById("source-cam-div").appendChild(btn1);
+    document.getElementById("source-cam-div").appendChild(btn2);
 }
 window.onload = init;
