@@ -446,7 +446,15 @@ nav li:hover .niveau1 a:hover {
 #cam-btn {
 	width: 42%;
 	margin-left: 15%;
-	margin-bottom: 6%;
+	margin-bottom: 2%;
+	background-color: aliceblue;
+	font-size: 120%;
+}
+
+.picture-btn {
+	width: 42%;
+	margin-left: 15%;
+	margin-bottom: .5%;
 	background-color: aliceblue;
 	font-size: 120%;
 }
@@ -454,6 +462,10 @@ nav li:hover .niveau1 a:hover {
 #vid-img {
 	position: absolute;
 	width: 10%;
+}
+
+#myForm {
+	margin-left: 15%;
 }
 
 #cvs {

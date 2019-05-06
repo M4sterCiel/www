@@ -12,6 +12,7 @@ if (($result = db_check('users', '*', 'username', $_POST['user'])))
         $_SESSION['logd_on'] = 'ok';
         $_SESSION['user'] = $result[0]['username'];
         $_SESSION['email'] = $result[0]['email'];
+        $_SESSION['id'] = $result[0]['id'];
     }
     else if ($result[0]['password'] == $passwd && $result[0]['active'] == 0)
     {

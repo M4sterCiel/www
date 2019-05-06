@@ -51,7 +51,7 @@ function db_update_usr($field, $var, $user) {
 
 function db_insert_picture($user_id, $path) {
     try {
-        $sql = "INSERT INTO `gallery` (`id`, `user_id`, `pic_link`, `nb_like`, `date`) VALUES (NULL, '$user_id', '$path', NULL, CURRENT_TIMESTAMP)";
+        $sql = "INSERT INTO `gallery` VALUES (NULL, '$user_id', '$path', NULL, CURRENT_TIMESTAMP)";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
     } catch (PDOException $e) {

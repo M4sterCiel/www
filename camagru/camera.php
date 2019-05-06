@@ -23,7 +23,8 @@ if (!$_SESSION['logd_on'])
     </div>
     <br>
 <button id="cam-btn" disabled>Take a pic!</button>
-<form>
+<form id="myForm">
+    Choose a picture. Max 5Mo. <br>
     <input onchange="upload(this.files)" id="file" type="file" name="myFile" value="" accept="image/png, image/jpeg" style="margin-bottom: 3%;">
 </form>
 <br><br>
