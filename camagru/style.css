@@ -523,3 +523,12 @@ nav li:hover .niveau1 a:hover {
 	font-size: 1.5vw;
 }
 
+.profile-img {
+	width: 40%;
+	margin-left: 5%;
+}
+
+.profile-title {
+	text-align: center;
+	font-size: 230%;
+}

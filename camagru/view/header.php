@@ -24,7 +24,7 @@
                 echo "<li class=\"nav-right\"><a href=\"/camagru/view/logout.php\">Logout</a></li>";
                 echo "<li class=\"nav-right\"><a href=\"\">Account</a>
                 <ul class=\"niveau1\">
-                    <li><a href=\"\">See my profile</a></li>
+                    <li><a href=\"/camagru/view/profile.php\">See my pictures</a></li>
                     <li><a href=\"/camagru/view/edit_profile.php\">Edit my profile</a></li>
                     <li><a href=\"/camagru/view/delete.php\">Delete my account</a></li>";
             }

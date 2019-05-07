@@ -14,7 +14,5 @@ if ($_POST['delete'] == 'ok')
 
 if ($_POST['save'] == 'ok')
 {
-    $path = "../" . $_POST['src'];
-    db_insert_picture($_SESSION['id'], $path);
     echo "Picture saved in DB";
 }

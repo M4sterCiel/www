@@ -39,4 +39,6 @@ else
 imagedestroy($img_src);
 imagedestroy($layer);
 
+db_insert_picture($_SESSION['id'], $file);
+
 echo $file;
