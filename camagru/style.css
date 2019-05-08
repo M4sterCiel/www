@@ -533,3 +533,13 @@ nav li:hover .niveau1 a:hover {
 	text-align: center;
 	font-size: 230%;
 }
+
+#no-content-index {
+	width: 40%;
+	margin-top: 3%;
+	margin-left: 30%;
+}
+
+#index-gallery {
+	margin-left: 32%;
+}

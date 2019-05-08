@@ -102,4 +102,15 @@ function db_get_reload_pictures($last) {
     }
 }
 
+function db_get_comments($pic) {
+    try {
+        $sql = "SELECT `comment` FROM `comments` WHERE `pic_link` = '$pic' ORDER BY `date`";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
 ?>

@@ -6,7 +6,14 @@ function init(){
       if (this.readyState == 4 && this.status == 200) {
           var data = this.responseText;
           data = JSON.parse(data);
-          console.log(data);
+          console.log(data[0][5][0]['comment']);
+          if (!data)
+          {
+            var img = document.createElement("img");
+            img.src = "/camagru/img/no-content.jpg";
+            img.id = "no-content-index";
+            document.getElementById("index-gallery").appendChild(img);
+          }
           for(i = 0;i < data.length;i++){
             var div = document.createElement("div");
             div.id = "myDiv-index" + data[i][0];
@@ -17,8 +24,16 @@ function init(){
             var img = document.createElement("img");
             img.id = "index-img" + data[i][0];
             img.src = data[i][1].substring(3);
+            img.style.width = "50%";
             img.className = "index-img";
             document.getElementById(div.id).appendChild(img);
+            if (data[i][5])
+            {
+                var com = document.createElement('div');
+                com.id = "com-index" + data[i][0];
+                document.getElementById(div.id).appendChild(com);
+                document.getElementById(com.id).innerHTML = data[0][5][0]['comment'];
+            }
           }
       }
     }
@@ -57,6 +72,7 @@ function add_content(last){
             img.id = "index-img" + data[i][0];
             img.src = data[i][1].substring(3);
             img.className = "index-img";
+            img.style.width = "50%";
             document.getElementById(div.id).appendChild(img);
           }
       }
