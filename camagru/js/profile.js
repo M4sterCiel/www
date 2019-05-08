@@ -25,31 +25,32 @@ function init(){
 }
 
 function addButton(div, img_src){
-//    var matches = document.getElementsByClassName("profile-img");
 
+        img_src = img_src.split('camagru');
         var btn = document.createElement("button");
         btn.className = "profile-btn";
         btn.textContent = "Delete";
-        btn.value = decodeURI(img_src);
+        btn.value = ".." + img_src[1];
+        console.log(btn.value);
         btn.setAttribute("onclick", "del(this)");
         document.getElementById(div).appendChild(btn);
-        //parent.insertBefore(btn, matches[i + 1]);
-      
 }
 
 function del(btn){
-
-    console.log((btn.value));
-    /* var xhttp = new XMLHttpRequest();
+    
+    var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-
+          console.log(this.responseText);
+            var parent = btn.parentNode;
+            parent.remove();
       }
+    }
     xhttp.open("POST", "/camagru/usr/delete_usr_picture.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("delete=ok&src" + btn.value);
-    } */
+    xhttp.send("delete=ok&src=" + btn.value);
 }
+
 
 window.onload = init;
 

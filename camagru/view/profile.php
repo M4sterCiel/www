@@ -7,8 +7,8 @@ session_start();?>
                 <p>Your pictures section</p><br>
             </div>
             <div id="profile-gallery">
-
             </div>
+            <br><br>
         </body>
         <script type="text/javascript" src="../js/profile.js"></script>
     </html>

@@ -80,4 +80,26 @@ function db_delete_usr_picture($id, $src) {
     }
 }
 
+function db_get_all_pictures() {
+    try {
+        $sql = "SELECT * FROM `gallery` ORDER BY `date` DESC LIMIT 5";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
+function db_get_reload_pictures($last) {
+    try {
+        $sql = "SELECT * FROM `gallery` WHERE `id` < '$last' ORDER BY `date` DESC LIMIT 5";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
 ?>
