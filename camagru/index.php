@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php include "view/header.php";?>
 <html>
-    <body>
+    <body style="background-color: lightgrey;">
         <div id="index-gallery"></div>
         <br><br>
     </body>

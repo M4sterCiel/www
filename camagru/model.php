@@ -51,7 +51,7 @@ function db_update_usr($field, $var, $user) {
 
 function db_insert_picture($user_id, $path) {
     try {
-        $sql = "INSERT INTO `gallery` VALUES (NULL, '$user_id', '$path', NULL, CURRENT_TIMESTAMP)";
+        $sql = "INSERT INTO `gallery` VALUES (NULL, '$user_id', '$path', 0, CURRENT_TIMESTAMP)";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
     } catch (PDOException $e) {
@@ -61,7 +61,7 @@ function db_insert_picture($user_id, $path) {
 
 function db_get_usr_picture($user_id) {
     try {
-        $sql = "SELECT * FROM `gallery` WHERE `user_id` LIKE '$user_id'";
+        $sql = "SELECT * FROM `gallery` WHERE `user_id` LIKE '$user_id' ORDER BY `id` DESC";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -82,7 +82,7 @@ function db_delete_usr_picture($id, $src) {
 
 function db_get_all_pictures() {
     try {
-        $sql = "SELECT * FROM `gallery` ORDER BY `date` DESC LIMIT 5";
+        $sql = "SELECT * FROM `gallery` ORDER BY `id` DESC LIMIT 5";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -93,7 +93,7 @@ function db_get_all_pictures() {
 
 function db_get_reload_pictures($last) {
     try {
-        $sql = "SELECT * FROM `gallery` WHERE `id` < '$last' ORDER BY `date` DESC LIMIT 5";
+        $sql = "SELECT * FROM `gallery` WHERE `id` < '$last' ORDER BY `id` DESC LIMIT 5";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -104,7 +104,7 @@ function db_get_reload_pictures($last) {
 
 function db_get_comments($pic) {
     try {
-        $sql = "SELECT `comment` FROM `comments` WHERE `pic_link` = '$pic' ORDER BY `date`";
+        $sql = "SELECT * FROM `comments` WHERE `picture_id` = '$pic' ORDER BY `date`";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -113,4 +113,61 @@ function db_get_comments($pic) {
     }
 }
 
+function db_check_likes($user, $picture){
+    try {
+        $sql = "SELECT * FROM `likes` WHERE `user_id` LIKE '$user' AND `picture_id` LIKE '$picture'";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $result = $stmt->fetchAll();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
+function db_add_likes($user, $picture){
+    try {
+        $sql = "INSERT INTO `likes` VALUES (NULL, '$user', '$picture')";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        $sql2 = "UPDATE `gallery` set nb_like = nb_like+1 WHERE `id` LIKE '$picture'";
+        $stmt2 = db_connect()->prepare($sql2);
+        $stmt2->execute();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
+function db_get_pic_likes($picture){
+    try {
+        $sql = "SELECT * FROM `gallery` WHERE `id` LIKE '$picture'";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
+function db_del_likes($user, $picture){
+    try {
+        $sql = "DELETE FROM `likes` WHERE `user_id` LIKE '$user' AND `picture_id` LIKE '$picture'";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        $sql2 = "UPDATE `gallery` set nb_like = nb_like-1 WHERE `id` LIKE '$picture'";
+        $stmt2 = db_connect()->prepare($sql2);
+        $stmt2->execute();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
+function db_add_comment($user, $picture, $text){
+    try {
+        $sql = "INSERT INTO `comments` VALUES (NULL, '$user', '$picture', '$text', CURRENT_TIMESTAMP)";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
 ?>

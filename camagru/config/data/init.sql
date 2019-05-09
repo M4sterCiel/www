@@ -19,7 +19,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     user_id INT(11) UNSIGNED,
     pic_link MEDIUMTEXT NOT NULL,
-    nb_like iNT(11),
+    nb_like iNT(11) DEFAULT '0',
     date TIMESTAMP,
     CONSTRAINT user_id FOREIGN KEY (user_id)     
     REFERENCES users (id)  
@@ -28,8 +28,13 @@ CREATE DATABASE IF NOT EXISTS camagru;
   CREATE TABLE comments (
   id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT(11) NOT NULL,
-  pic_link MEDIUMTEXT NOT NULL,
-  nb_like INT(11),
+  picture_id INT(11),
   comment VARCHAR(120),
   date TIMESTAMP
 );
+
+CREATE TABLE likes (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) UNSIGNED,
+    picture_id INT(11)
+  );

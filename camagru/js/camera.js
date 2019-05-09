@@ -128,7 +128,7 @@ function del(btn) {
             document.getElementById("file").removeAttribute("disabled");
             imageCapture = 0;
             disable_btn();
-            selected = 0;
+            selected = 1;
         }
     }
     xhttp.open("POST", "/camagru/usr/pic_action.php", true);
@@ -166,7 +166,7 @@ function save(btn) {
             document.getElementById("file").removeAttribute("disabled");
             imageCapture = 0;
             disable_btn();
-            selected = 0;
+            selected = 1;
             
         }
     }
@@ -193,7 +193,8 @@ function upload(files){
     imageCapture = 1;
     if (noVideo == 1)
     {
-        document.getElementById("sourcevid").remove();
+        if (document.getElementById("sourcevid"))
+            document.getElementById("sourcevid").remove();
         document.getElementById("no-image").remove();
     }
     else
