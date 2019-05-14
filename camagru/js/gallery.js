@@ -104,35 +104,37 @@ function init(){
             img.id = "no-content-index";
             document.getElementById("index-gallery").appendChild(img);
           }
-          for(i = 0;i < data.length;i++){
-            var div = document.createElement("div");
-            div.id = "myDiv-index" + data[i][0];
-            div.className = "myDiv-index";
-            document.getElementById("index-gallery").appendChild(div);
-            var username = document.createElement("p");
-            username.textContent = data[i][3];
-            username.style.marginLeft = "1%";
-            username.style.color = "darkblue";
-            document.getElementById(div.id).appendChild(username);
-            var img = document.createElement("img");
-            img.id = "index-img" + data[i][0];
-            img.src = data[i][1].substring(3);
-            img.className = "index-img";
-            document.getElementById(div.id).appendChild(img);
-            addButtonLike(div.id, data[i][2], data[i][0]);
-            if (data[i][5])
-            {
-                var k = 0;
-                for(k=0;k<data[i][5].length;k++)
+          else {
+            for(i = 0;i < data.length;i++){
+                var div = document.createElement("div");
+                div.id = "myDiv-index" + data[i][0];
+                div.className = "myDiv-index";
+                document.getElementById("index-gallery").appendChild(div);
+                var username = document.createElement("p");
+                username.textContent = data[i][3];
+                username.style.marginLeft = "1%";
+                username.style.color = "darkblue";
+                document.getElementById(div.id).appendChild(username);
+                var img = document.createElement("img");
+                img.id = "index-img" + data[i][0];
+                img.src = data[i][1].substring(3);
+                img.className = "index-img";
+                document.getElementById(div.id).appendChild(img);
+                addButtonLike(div.id, data[i][2], data[i][0]);
+                if (data[i][5])
                 {
-                    var com = document.createElement('div');
-                    com.className = "com-index";
-                    document.getElementById(div.id).appendChild(com);
-                    com.textContent = data[i][5][k]['username'] +": "+ data[i][5][k]['comment'];
+                    var k = 0;
+                    for(k=0;k<data[i][5].length;k++)
+                    {
+                        var com = document.createElement('div');
+                        com.className = "com-index";
+                        document.getElementById(div.id).appendChild(com);
+                        com.textContent = data[i][5][k]['username'] +": "+ data[i][5][k]['comment'];
+                    }
                 }
+                addFieldComment(div.id, data[i][0]);
             }
-            addFieldComment(div.id, data[i][0]);
-          }
+        }
       }
     }
     xhttp.open("POST", "/camagru/usr/gallery.php", true);
