@@ -24,7 +24,8 @@ function init() {
         noVideo = 1;
         let img = document.createElement("img");
         img.src = "/camagru/img/no-image.png";
-        img.style.width = "120%";
+        img.style.width = "100%";
+        img.style.marginLeft = "10%";
         img.id = "no-image";
         document.getElementById("source-cam-div").appendChild(img);
         document.getElementById("sourcevid").style = "display: none;";
@@ -50,13 +51,13 @@ function clone(){
       if (this.readyState == 4 && this.status == 200) 
       {
         console.log(this.responseText);
-        var src = this.responseText.split("../");
+        var src = this.responseText;
         var img = document.createElement("img");
-        img.src = src[1];
+        img.src = src;
         img.style = "width:120%;";
         img.id = "gallery-img";
         document.getElementById("source-cam-div").appendChild(img);
-        createButton(src[1]);
+        createButton(src);
         if (noVideo == 0 && imageCapture == 0)
             document.getElementById("sourcevid").style = "display: none;";
         else if (noVideo == 0 && imageCapture == 1)
@@ -120,7 +121,8 @@ function del(btn) {
             {
                 let img = document.createElement("img");
                 img.src = "/camagru/img/no-image.png";
-                img.style.width = "120%";
+                img.style.width = "100%";
+                img.style.marginLeft = "10%";
                 img.id = "no-image";
                 document.getElementById("source-cam-div").appendChild(img);
                 document.getElementById("myForm").reset();
@@ -128,7 +130,10 @@ function del(btn) {
             document.getElementById("file").removeAttribute("disabled");
             imageCapture = 0;
             disable_btn();
-            selected = 1;
+            if (noVideo == 0)
+                selected = 0;
+            else
+                selected = 1;
         }
     }
     xhttp.open("POST", "/camagru/usr/pic_action.php", true);
@@ -150,24 +155,33 @@ function save(btn) {
             document.getElementById("btn2").remove();
             if (noVideo == 0)
             {
+                selected = 0;
+                if (document.getElementById("no-photo-camera"))
+                {
+                    document.getElementById("no-photo-camera").remove();
+                    document.getElementById("no-photo-msg").remove();
+                }
                 document.getElementById("sourcevid").style = "display:inline";
                 if (imageCapture == 1)
                     document.getElementById("myForm").reset();
             }
             else
             {
+                if (document.getElementById("no-photo-camera"))
+                    document.getElementById("no-photo-camera").remove();
+                    document.getElementById("no-photo-msg").remove();
                 let img = document.createElement("img");
                 img.src = "/camagru/img/no-image.png";
-                img.style.width = "120%";
+                img.style.width = "100%";
+                img.style.marginLeft = "10%";
                 img.id = "no-image";
                 document.getElementById("source-cam-div").appendChild(img);
                 document.getElementById("myForm").reset();
+                selected = 1;
             }
             document.getElementById("file").removeAttribute("disabled");
             imageCapture = 0;
             disable_btn();
-            selected = 1;
-            
         }
     }
     xhttp.open("POST", "/camagru/usr/pic_action.php", true);

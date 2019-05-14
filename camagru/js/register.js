@@ -27,54 +27,54 @@ document.getElementById("reg-submit").onclick = function (event) {
               document.getElementById("reg-hidden-usr").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-usr").style = "display: inherit;";
               document.getElementById("username").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("username").style ="background-color: lightgrey;";
+              setTimeout(function(){document.getElementById("username").style ="background-color: whitesmoke;";
               document.getElementById("reg-hidden-usr").style = "display: none;"}, 5000);
               break;
             case "Username must not contain whitespaces":
               document.getElementById("reg-hidden-usr").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-usr").style = "display: inherit;";
               document.getElementById("username").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("username").style ="background-color: lightgrey;";
+              setTimeout(function(){document.getElementById("username").style ="background-color: whitesmoke;";
               document.getElementById("reg-hidden-usr").style = "display: none;"}, 5000);
               break;
             case "Please, enter a correct username":
               document.getElementById("reg-hidden-usr").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-usr").style = "display: inherit;";
               document.getElementById("username").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("username").style ="background-color: lightgrey;";
+              setTimeout(function(){document.getElementById("username").style ="background-color: whitesmoke;";
               document.getElementById("reg-hidden-usr").style = "display: none;"}, 5000);
               break;
             case "This email already exists":
               document.getElementById("reg-hidden-mail").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-mail").style = "display: inherit;";
               document.getElementById("reg-mail").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("reg-mail").style ="background-color: lightgrey;";
+              setTimeout(function(){document.getElementById("reg-mail").style ="background-color: whitesmoke;";
               document.getElementById("reg-hidden-mail").style = "display: none;";}, 5000);
               break;
             case "Please, enter a correct e-mail address":
               document.getElementById("reg-hidden-mail").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-mail").style = "display: inherit;";
               document.getElementById("reg-mail").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("reg-mail").style ="background-color: lightgrey;";
+              setTimeout(function(){document.getElementById("reg-mail").style ="background-color: whitesmoke;";
               document.getElementById("reg-hidden-mail").style = "display: none;"}, 5000);
               break;
             case "Wrong password!":
               document.getElementById("reg-hidden-pwd").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-pwd").style = "display: inherit;";
               document.getElementById("reg-passwd2").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("reg-passwd2").style ="background-color: lightgrey;"; document.getElementById("reg-hidden-pwd").style = "display: none;"}, 5000);
+              setTimeout(function(){document.getElementById("reg-passwd2").style ="background-color: whitesmoke;"; document.getElementById("reg-hidden-pwd").style = "display: none;"}, 5000);
               break;
             case "Password should respect this pattern (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)!":
               document.getElementById("reg-hidden-pwd").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-pwd").style = "display: inherit;";
               document.getElementById("reg-passwd").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("reg-passwd").style ="background-color: lightgrey;"; document.getElementById("reg-hidden-pwd").style = "display: none;"}, 5000);
+              setTimeout(function(){document.getElementById("reg-passwd").style ="background-color: whitesmoke;"; document.getElementById("reg-hidden-pwd").style = "display: none;"}, 5000);
               break;
             case "Empty answer":
               document.getElementById("reg-hidden-answer").innerHTML = '  ✘' + ' ' + this.responseText;
               document.getElementById("reg-hidden-answer").style = "display: inherit;";
               document.getElementById("reg-answer").style ="background-color: pink;";
-              setTimeout(function(){document.getElementById("reg-answer").style ="background-color: lightgrey;"; document.getElementById("reg-hidden-answer").style = "display: none;"}, 5000);
+              setTimeout(function(){document.getElementById("reg-answer").style ="background-color: whitesmoke;"; document.getElementById("reg-hidden-answer").style = "display: none;"}, 5000);
               break;
           }
         }

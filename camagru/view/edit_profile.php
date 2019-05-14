@@ -3,24 +3,25 @@ session_start();?>
 <!DOCTYPE html>
     <html>
     <body>
-    <br>
-    <br>
-    <div id="main-div">
-    <label for="usrname">Username</label><br>
-    <?php
-    if ($_SESSION['user'])
-        echo "<p name=\"usrname\">" . $_SESSION['user'] . "</p>";
-    ?>
-    <div id="edit-usrname">
-    <input id="btn-usrname" type="submit" value="Edit" onclick="add_usrname_form()"></div>
-    <label for="email">Email address</label><br>
-    <?php
-    if ($_SESSION['email'])
-        echo "<p name=\"email\">" . $_SESSION['email'] . "</p>";
-    ?>
-    <div id="edit-email"></div>
-    <input id="btn-email" type="submit" value="Edit" onclick="add_email_form(event)"><br>
-    <input type="submit" value="Change your password" onclick="edit_pwd(event)">
+        <h2>My settings</h2>
+    <div class="mainDiv-edit">
+        <form id="usr-form-edit">
+            <label for="usr-edit">Username:</label>
+            <p id="usr-edit"></p>
+            <input id="usr-sub-edit" type="submit" value="Edit your username" onclick="editUsername(event)">
+        </form>
+        <br>
+        <form id="mail-form-edit">
+            <label for="mail-edit">Email address:</label>
+            <p id="mail-edit"></p>
+            <input id="mail-sub-edit" type="submit" value="Edit your email" onclick="editEmail(event)">
+        </form>
+        <br>
+        <button onclick="editPassword()">Reset your password</button>
+        <br>
+        <br>
+        <input id="edit-notif-on" type="radio" name="notification" onchange="editNotif()">Accpet notifications
+        <input id="edit-notif-off" type="radio" name="notification" onchange="editNotif()">Do not receive notifications
     </div>
     <script type="text/javascript" src="/camagru/js/edit_profile.js"></script>
     </body>

@@ -13,9 +13,9 @@
         <ul>
             <?php
             if ($_SESSION['logd_on'] == 'ok')
-                echo "<li><a href=\"/camagru/camera.php\">Take a picture</a></li>";
+                echo "<li><a id=\"main-btn\" href=\"/camagru/view/camera.php\">Take a picture</a></li>";
             else
-                echo "<li><a href=\"#\">Take a picture</a></li>";
+                echo "<li><a id=\"main-btn\" href=\"#\" onclick=\"noLogin()\">Take a picture</a></li>";
                 ?>
             <li><a href="/camagru/index.php">Home</a></li>
             <?php
@@ -35,6 +35,8 @@
             }
             ?>
         </ul>
+        <div id="hidden-div-header"></div>
     </nav>
+    <script type="text/javascript" src="/camagru/js/noLogin.js"></script>
 </header>
 <div class="footer">© Camagru 2019</div>

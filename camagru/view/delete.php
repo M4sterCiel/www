@@ -7,7 +7,7 @@ include "footer.php";?>
     <body>
     <br>
     <fieldset id="groupe">
-        <form method="POST" class="form_delete_usr">
+        <form id="del-form" method="POST" class="form_delete_usr">
             <div id="del-div"></div><br>
             <label for="passwd">Enter your password</label><br><br>
             <input type="password" name="passwd" id="del-passwd" placeholder="Type your password" autofocus required><br><br>

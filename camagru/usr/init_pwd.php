@@ -36,3 +36,5 @@ This is an automatic mail system, please do not answer this mail.";
         echo "✘ Incorrect Question/answer...";
     }
 }
+else
+    echo "✘ Incorrect username!";

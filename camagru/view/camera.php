@@ -1,10 +1,10 @@
-<?php include 'view/header.php';
+<?php include '../view/header.php';
 session_start();
 if (!$_SESSION['logd_on'])
     header('Location: /camagru/index.php');
 ?>
-	<script type="text/javascript" src="js/camera.js"></script>
-<body>
+	<script type="text/javascript" src="../js/camera.js"></script>
+<body style="background-color: lightgrey;">
     <div id="calque" class="calque-div">
         <a href="#"><img class="layer-img" src="/camagru/img/pitcher.png" alt="pitcher" onclick="layer(this)"></a>
         <a href="#"><img class="layer-img" src="/camagru/img/linux.png" alt="linux" onclick="layer(this)"></a>
@@ -15,6 +15,8 @@ if (!$_SESSION['logd_on'])
     <div class="cam-div">
         <div id="gallery-cam" class="gallery-cam-div">
             <canvas id="cvs" width="800" height="600"></canvas>
+            <img id="no-photo-camera" src="/camagru/img/no-photo.png" alt="No photo">
+            <p id="no-photo-msg" style="margin-left:5%;">Use your webcam or the file browser to select a picture and apply a layer</p>
             </div>
         </div>
         <div id="source-cam-div" class="sourcevid" name="selected">

@@ -28,6 +28,7 @@ CREATE DATABASE IF NOT EXISTS camagru;
   CREATE TABLE comments (
   id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT(11) NOT NULL,
+  username VARCHAR(255),
   picture_id INT(11),
   comment VARCHAR(120),
   date TIMESTAMP

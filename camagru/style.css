@@ -3,6 +3,7 @@ body {
 	margin: 0%;
 	padding: 0%;
 	height: 100%;
+	background-color: lightgrey;
 }
 
 nav > ul {
@@ -103,7 +104,7 @@ nav li:hover .niveau1 a:hover {
 	margin: 1.5% 5% 5%;
 	display: inline-block;
 	border-left-style: solid;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	border-left-width: 5px;
 	border-radius: 4px;
 	box-sizing: border-box;
@@ -117,13 +118,13 @@ nav li:hover .niveau1 a:hover {
 	border-left-style: solid;
 	border-left-width: 5px;
 	border-radius: 4px;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	box-sizing: border-box;
  }
 
  .form_login_usr input[type=submit]
  {
-	background-color:lightgrey;
+	background-color:whitesmoke;
 	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
@@ -148,7 +149,7 @@ nav li:hover .niveau1 a:hover {
 	margin-left: 5%;
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: white;
+	background-color: lightgrey;
 	color: red;
 	width: 90%;
 	border-radius: 3px;
@@ -163,7 +164,7 @@ nav li:hover .niveau1 a:hover {
 
  .form_register_usr input[type=text] {
 	width: 90%;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
@@ -175,7 +176,7 @@ nav li:hover .niveau1 a:hover {
  }
  .form_register_usr input[type=email] {
 	width: 90%;
-	background-color: lightgray;
+	background-color: whitesmoke;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: .5% 5% 1%;
@@ -188,7 +189,7 @@ nav li:hover .niveau1 a:hover {
 
  .form_register_usr select {
 	margin: .5% 5% 1%;
-	background-color: lightgray;
+	background-color: whitesmoke;
 	width: 90%;
 	height: 6%;
 	border-radius: 10px;
@@ -202,7 +203,7 @@ nav li:hover .niveau1 a:hover {
 	display: inline-block;
 	border-radius: 4px;
 	box-sizing: border-box;
-	background-color: lightgray;
+	background-color: whitesmoke;
 	border-left-style: solid;
 	border-left-width: 5px;
  }
@@ -217,7 +218,7 @@ nav li:hover .niveau1 a:hover {
 
 .form_register_usr input[type=submit]
  {
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	width: 20%;
 	height: 25%;
 	border-radius: 16px;
@@ -294,7 +295,7 @@ nav li:hover .niveau1 a:hover {
 	
 .form_forgotten_usr input[type=submit]
 {
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	width: 30%;
 	height: 25%;
 	border-radius: 16px;
@@ -321,7 +322,7 @@ nav li:hover .niveau1 a:hover {
 	display: inline-block;
 	border-left-style: solid;
 	border-left-width: 5px;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 }
 
 .form_forgotten_usr input[type=text] {
@@ -331,7 +332,7 @@ nav li:hover .niveau1 a:hover {
 	display: inline-block;
 	border-left-style: solid;
 	border-left-width: 5px;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 }
 
 #forgotten-div {
@@ -359,7 +360,7 @@ nav li:hover .niveau1 a:hover {
 	display: inline-block;
 	border-left-style: solid;
 	border-left-width: 5px;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 }
 
 .form_nw_pwd label {
@@ -369,7 +370,7 @@ nav li:hover .niveau1 a:hover {
 
 .form_nw_pwd input[type=submit]
 {
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	width: 33%;
 	height: 6%;
 	margin-top: 2%;
@@ -405,8 +406,8 @@ nav li:hover .niveau1 a:hover {
 	width: 120%;
 }
 .sourcevid {
-   margin-left: 15%;
-   width: 35%;
+   margin-left: 18%;
+   width: 30%;
 }
 
 .gallery-cam-div {
@@ -422,14 +423,12 @@ nav li:hover .niveau1 a:hover {
 }
 
 .calque-div {
-	margin-left: 15%;
+	margin-left: 17%;
 	margin-bottom: 1%;
 	width: 80%;
 	overflow: auto;
 	white-space: nowrap;
-/* 	border: #222538;
-	border-style: groove;
- */	height: 15%;
+	height: 15%;
 	overflow: scroll;
 }
 
@@ -445,16 +444,16 @@ nav li:hover .niveau1 a:hover {
 }
 
 #cam-btn {
-	width: 42%;
-	margin-left: 15%;
+	width: 37%;
+	margin-left: 17.5%;
 	margin-bottom: 2%;
 	background-color: aliceblue;
 	font-size: 120%;
 }
 
 .picture-btn {
-	width: 42%;
-	margin-left: 15%;
+	width: 37%;
+	margin-left: 17.5%;
 	margin-bottom: .5%;
 	background-color: aliceblue;
 	font-size: 120%;
@@ -466,7 +465,7 @@ nav li:hover .niveau1 a:hover {
 }
 
 #myForm {
-	margin-left: 15%;
+	margin-left: 17.5%;
 }
 
 #cvs {
@@ -502,7 +501,7 @@ nav li:hover .niveau1 a:hover {
 	display: inline-block;
 	border-left-style: solid;
 	border-left-width: 5px;
-	background-color: lightgrey;
+	background-color: whitesmoke;
 }
 
 .form_delete_usr label {
@@ -512,7 +511,7 @@ nav li:hover .niveau1 a:hover {
 
 .form_delete_usr input[type=submit]
 {
-	background-color: lightgrey;
+	background-color: whitesmoke;
 	width: 33%;
 	height: 6%;
 	margin-top: 2%;
@@ -524,9 +523,93 @@ nav li:hover .niveau1 a:hover {
 	font-size: 1.5vw;
 }
 
-.profile-img {
+#no-content-index {
 	width: 40%;
+	margin-top: 6%;
 	margin-left: 5%;
+}
+
+#index-gallery {
+	margin-left: 30%;
+	width: 70%;
+}
+
+.com-index {
+	width: 96%;
+	margin-left: 2%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	background-color: lightgray;
+	border-radius: 5px;
+	border-style: none;
+	overflow: auto;
+	max-height: 100px;
+	font-size: 95%;
+}
+
+.comment-area {
+	display: block;
+	min-height: 2vw;
+	width: 96%;
+	border-radius: 12px;
+	margin-top: 2%;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	border-style: none;
+	background-color: lightgray;
+	max-height: 25px;
+}
+
+.comment-area:focus {
+	outline: none;
+}
+
+.myDiv-index {
+	width: 55%;
+	background-color: whitesmoke;
+	padding-bottom: .2%;
+	border-radius: 3px;
+}
+
+.index-img {
+	width: 96%;
+	margin-left: 2%;
+}
+
+.like-btn {
+	cursor: pointer;
+	width: 4%;
+	margin-left: 1%;
+}
+
+#back_top {
+	position: fixed;
+	opacity: 0.5;
+	right: -400px;
+	bottom: 70px;
+}
+
+#back_top img {
+	width: 8%;
+}
+
+.myDiv-profile {
+	margin-left: 28%;
+	margin-top: 2%;
+	width: 45%;
+	padding-bottom: 1%;
+	border-radius: 5px;
+	background-color: whitesmoke;
+}
+
+#no-content-profile{
+	width: 35%;
+	margin-left: 32%;
+}
+.profile-img {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 2%;
 }
 
 .profile-title {
@@ -534,13 +617,61 @@ nav li:hover .niveau1 a:hover {
 	font-size: 230%;
 }
 
-#no-content-index {
-	width: 40%;
-	margin-top: 3%;
+.com-profile {
+	margin-left: 5%;
+	width: 90%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	background-color: lightgray;
+	border-radius: 5px;
+	border-style: none;
+	overflow: auto;
+	max-height: 100px;
+	font-size: 95%;
+}
+
+.profile-btn {
+	margin-left: 75%;
+	margin-top: 1%;
+}
+
+.mainDiv-edit {
 	margin-left: 30%;
+	margin-top: 5%;
+	padding-left: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 40%;
+	background-color: whitesmoke;
+	border-radius: 3px;
+	border-left-style: solid;
+	border-left-width: 5px;
 }
 
-#index-gallery {
-	margin-left: 32%;
+#usr-edit {
+	color: darkblue;
+	font-size: larger;
+	background-color: lightgrey;
+	width: 95%;
 }
 
+#mail-edit {
+	color: darkblue;
+	font-size: larger;
+	background-color: lightgrey;
+	width: 95%;
+}
+
+.mainDiv-edit label {
+	text-decoration: underline;
+}
+
+body h2 {
+	text-align: center;
+}
+
+.edit-input {
+	margin-top: 5%;
+	border-style: none;
+	font-size: larger;
+}

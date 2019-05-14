@@ -3,7 +3,7 @@
     <html>
     <body>
     <p id="register-div"></p>
-    <fieldset id="groupe">   
+    <fieldset id="groupe" style="padding-bottom: 2%">   
         <form id="form_register_usr" class="form_register_usr">
         <br>
         <label id="first-label" for="username">Username</label><br>

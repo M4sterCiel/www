@@ -12,6 +12,12 @@ if ($result = db_check('users', '*', 'email', $_SESSION['email']))
 {
     if ($result[0]['password'] == $passwd)
     {
+        $res = db_get_usr_picture($_SESSION['id']);
+        foreach ($res as $value)
+        {
+            unlink($value['pic_link']);
+            db_delete_usr_picture($_SESSION['id'], $value['pic_link']);
+        }
         db_delete_usr($_SESSION['email']);
         echo "✓ Your account have been deleted successfully!";
         header('Refresh: 3; logout.php');
