@@ -39,4 +39,8 @@
     </nav>
     <script type="text/javascript" src="/camagru/js/noLogin.js"></script>
 </header>
-<div class="footer">© Camagru 2019</div>
+<div class="footer">
+    <p style="display:inline;margin-right:4%;">Author: ralleman</p>
+    <p style="display:inline;margin-right:4%;">Contact: ralleman@student.42.fr</p>
+    <p style="display:inline;margin-right:4%;">© Camagru 2019</p>
+</div>

@@ -96,7 +96,7 @@ function init(){
       if (this.readyState == 4 && this.status == 200) {
           var data = this.responseText;
           data = JSON.parse(data);
-          console.log(data);
+         // console.log(data);
           if (!data)
           {
             var img = document.createElement("img");

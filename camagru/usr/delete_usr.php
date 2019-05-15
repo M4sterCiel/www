@@ -12,7 +12,7 @@ if ($result = db_check('users', '*', 'email', $_SESSION['email']))
 {
     if ($result[0]['password'] == $passwd)
     {
-        $res = db_get_usr_picture($_SESSION['id']);
+        $res = db_get_all_usr_picture($_SESSION['id']);
         foreach ($res as $value)
         {
             unlink($value['pic_link']);

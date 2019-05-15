@@ -50,7 +50,7 @@ function clone(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) 
       {
-        console.log(this.responseText);
+        //console.log(this.responseText);
         var src = this.responseText;
         var img = document.createElement("img");
         img.src = src;
@@ -107,7 +107,7 @@ function del(btn) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) 
         {
-            console.log(this.responseText);
+            //console.log(this.responseText);
             document.getElementById("gallery-img").remove();
             document.getElementById("btn1").remove();
             document.getElementById("btn2").remove();
@@ -146,7 +146,7 @@ function save(btn) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) 
         {
-            console.log(this.responseText);
+           // console.log(this.responseText);
             let img = document.createElement("img");
             img.src = btn.value;
             document.getElementById("gallery-cam").appendChild(img);
@@ -261,4 +261,5 @@ function imageType(files){
         return false;
     return true;
 }
+
 window.onload = init;

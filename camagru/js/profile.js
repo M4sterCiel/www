@@ -6,7 +6,7 @@ function init(){
       if (this.readyState == 4 && this.status == 200) {
           var data = this.responseText;
           data = JSON.parse(data);
-          console.log(data);
+         // console.log(data);
           if (!data)
           {
             var img = document.createElement("img");
@@ -118,7 +118,8 @@ function infinite_scroll() {
       var condition = document.getElementsByClassName("profile-img");
       var last = condition[condition.length - 1];
       last = last.id.split("profile-img")[1];
-      add_content(last);
+      if (last > 1)
+        add_content(last);
   }
 }
 

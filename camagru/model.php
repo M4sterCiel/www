@@ -70,6 +70,17 @@ function db_get_usr_picture($user_id) {
     }
 }
 
+function db_get_all_usr_picture($user_id) {
+    try {
+        $sql = "SELECT * FROM `gallery` WHERE `user_id` LIKE '$user_id' ORDER BY `id`";
+        $stmt = db_connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo 'Connexion échouée : ' . $e->getMessage();
+    }
+}
+
 function db_get_reload_usr_picture($user_id, $last) {
     try {
         $sql = "SELECT * FROM `gallery` WHERE `user_id` LIKE '$user_id' AND `id` < '$last' ORDER BY `id` DESC LIMIT 6";
@@ -104,7 +115,7 @@ function db_delete_usr_picture($id, $src) {
 
 function db_del_all_usr_picture($id, $src) {
     try {
-        $sql = "DELETE FROM `gallery` WHERE `pic_link` = '$src' AND `user_id` = '$id'";
+        $sql = "DELETE FROM `gallery` WHERE `user_id` = '$id' AND `user_id` = '$id'";
         $stmt = db_connect()->prepare($sql);
         $stmt->execute();
     } catch (PDOException $e) {

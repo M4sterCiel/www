@@ -1,5 +1,7 @@
 <?php include "header.php";
-session_start();?>
+session_start();
+if (!$_SESSION['id'] || !$_SESSION['user'])
+    header("Location: /camagru/index.php");?>
 <!DOCTYPE html>
     <html>
     <body>

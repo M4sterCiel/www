@@ -21,7 +21,7 @@ function editNotif(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
+      //console.log(this.responseText);
     }
   }
   xhttp.open("POST", "/camagru/usr/edit_data.php", true);
@@ -90,7 +90,7 @@ function changeUsername(event){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var data = (this.responseText);
-      console.log(data);
+      //console.log(data);
       if (data != ''){
         var wrong = document.createElement("p");
         wrong.textContent = data;
@@ -128,7 +128,7 @@ function changeEmail(event){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var data = (this.responseText);
-      console.log(data);
+      //console.log(data);
       if (data != ''){
         var wrong = document.createElement("p");
         wrong.textContent = data;
